@@ -1,0 +1,151 @@
+@font-face {
+  font-family: PTSans;
+  src: url(../fonts/PTSans/PTSans-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+header .container {
+  padding: 0;
+}
+header .container .row {
+  margin: 0;
+}
+header .top {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #969696;
+  font-size: 12px;
+  padding: 14px 0;
+}
+header .top p {
+  margin: 0;
+  font-family: PTSans;
+}
+header .top .info {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+header .top .info .phone {
+  display: flex;
+  padding: 0 14px 0 0;
+}
+header .top .info .phone i {
+  padding-top: 2px;
+  margin-right: 16px;
+  font-size: 14px;
+}
+header .top .info .workday {
+  padding: 0 14px;
+  border-right: 1px solid #969696;
+  border-left: 1px solid #969696;
+}
+header .top .info .worktime {
+  padding: 0 14px;
+}
+header .top .input {
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+header .top .input i {
+  padding-top: 2px;
+  margin-right: 14px;
+  font-size: 14px;
+}
+header .top .input a {
+  transition: 0.5s;
+  color: #969696;
+  font-size: 12px;
+}
+header .top .input a:hover {
+  transition: 0.5s;
+  color: white;
+  text-decoration: none;
+}
+header .navMenu {
+  background: #0f0f0f;
+}
+header .navMenu .logo {
+  padding: 6px 0;
+  margin: 16px 0;
+}
+header .navMenu .menu {
+  padding: 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+header .navMenu .menu .nav {
+  height: 100%;
+}
+header .navMenu .menu .nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+header .navMenu .menu .nav ul li {
+  transition: 0.3s;
+  height: 100%;
+  list-style: none;
+  padding: 25px 20px 0 ;
+}
+header .navMenu .menu .nav ul li p {
+  transition: 0.3s;
+  align-items: center;
+  text-transform: uppercase;
+  color: #969696;
+  font-size: 14px;
+  font-family: PTSans;
+}
+header .navMenu .menu .nav ul li:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #1f1f1f;
+}
+header .navMenu .menu .nav ul li:hover p {
+  transition: 0.3s;
+  color: white;
+}
+header .navMenu .menu .tool {
+  margin-right: -15px;
+}
+header .navMenu .menu .tool i {
+  color: white;
+  font-size: 16px;
+  padding: 0 5px;
+  margin: 0 20px;
+}
+header .navMenu .menu .tool i:hover {
+  cursor: pointer;
+}
+header .banner {
+  padding: 160px 0;
+  background-image: url("../img/background/bunner.png");
+  background-size: cover;
+  text-align: center;
+  color: #ffffff;
+}
+header .banner .col-xl-8 {
+  padding: 0;
+}
+header .banner .superLoge {
+  margin-bottom: 80px;
+}
+header .banner .text {
+  text-transform: uppercase;
+  padding: 0 2px;
+}
+header .banner .text p {
+  font-family: PTSans;
+  font-size: 16px;
+}

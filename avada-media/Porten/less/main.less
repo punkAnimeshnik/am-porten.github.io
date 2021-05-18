@@ -1,0 +1,165 @@
+@font-face {
+    font-family: PTSans;
+    src: url(../fonts/PTSans/PTSans-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+
+header{
+    .container{
+        padding: 0;
+        .row{
+            margin: 0;
+        }
+    }
+    .top{
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: rgba(150, 150, 150, 1);
+        font-size: 12px;
+        padding: 14px 0;
+        p{
+            margin: 0;
+            font-family: PTSans;
+        }
+        .info{
+            display: flex;
+            justify-content: flex-start;
+            padding: 0;
+
+            .phone{
+
+                display: flex;
+                padding: 0 14px 0 0;
+                i{
+                    padding-top: 2px;
+                    margin-right: 16px;
+                    font-size: 14px;
+                }
+            }
+            .workday{
+
+                padding: 0 14px;
+                border-right: 1px solid rgb(150, 150, 150) ;
+                border-left: 1px solid rgb(150, 150, 150) ;
+            }
+            .worktime{
+
+
+                padding: 0 14px;
+            }
+
+        }
+        .input{
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            i{
+                padding-top: 2px;
+                margin-right: 14px;
+                font-size: 14px;
+            }
+            a{
+                transition: 0.5s;
+                color: rgba(150, 150, 150, 1);
+                font-size: 12px;
+            }
+            a:hover{
+                transition: 0.5s;
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+    .navMenu{
+
+        background: rgba(15, 15, 15, 1);
+        .logo{
+            padding: 6px 0;
+            margin: 16px 0;
+        }
+        .menu{
+            padding: 0;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            .nav{
+                height: 100%;
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0;
+                    li{
+                        transition: 0.3s;
+                        height: 100%;
+                        list-style: none;
+                        padding: 25px 20px 0 ;
+                        p{
+                            transition: 0.3s;
+                            align-items: center;
+                            text-transform: uppercase;
+                            color: rgb(150,150,150);
+                            font-size: 14px;
+                            font-family: PTSans;
+                        }
+                    }
+                    li:hover{
+                        cursor: pointer;
+                        transition: 0.3s;
+                        background-color: rgb(31,31,31);
+                        p{
+                            transition: 0.3s;
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .tool{
+                margin-right: -15px;
+
+                i{
+                    color: white;
+                    font-size: 16px;
+                    padding: 0 5px;
+                    margin: 0 20px;
+                }
+                i:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+    .banner{
+        padding: 160px 0;
+        background-image: url("../img/background/bunner.png");
+        background-size: cover;
+        text-align: center;
+        color: #ffffff;
+        .col-xl-8{
+            padding: 0;
+        }
+        .superLoge{
+            margin-bottom: 80px;
+        }
+        .text{
+            text-transform: uppercase;
+            padding: 0 2px;
+            p{
+                font-family: PTSans;
+                font-size: 16px;
+            }
+        }
+    }
+}
