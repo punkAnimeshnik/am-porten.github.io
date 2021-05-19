@@ -2,6 +2,18 @@
     font-family: PTSans;
     src: url(../fonts/PTSans/PTSans-Regular.ttf);
 }
+@font-face {
+    font-family: Playfair;
+    src: url(../fonts/PlayfairDisplay/static/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+    font-family: Playfair-Italic;
+    src: url(../fonts/PlayfairDisplay/static/PlayfairDisplay-MediumItalic.ttf);
+}
+@font-face {
+    font-family: Playfair-Bold;
+    src: url(../fonts/PlayfairDisplay/static/PlayfairDisplay-Bold.ttf);
+}
 
 * {
     margin: 0;
@@ -10,8 +22,23 @@
     text-decoration: none;
     box-sizing: border-box;
     border-collapse: collapse;
+    list-style: none;
 }
 
+hr{
+
+    background-color: white;
+    width: 120px;
+}
+.title{
+    color: white;
+    text-align: center;
+    h1{
+        font-size: 36px;
+        font-family: Playfair;
+        text-transform: uppercase;
+    }
+}
 
 header{
     .container{
@@ -159,6 +186,223 @@ header{
             p{
                 font-family: PTSans;
                 font-size: 16px;
+            }
+        }
+    }
+}
+main{
+    background-color: black;
+    .collectionsUpLine{
+        display: flex;
+        color: white;
+        .season{
+            width: 55%;
+            padding: 93px 80px;
+            .title{
+                display: flex;
+                justify-content: center;
+                h1{
+                    font-size: 36px;
+                    font-family: Playfair-Bold;
+                    text-transform: uppercase;
+                    margin: 0;
+
+                }
+
+            }
+            hr{
+                margin: 50px auto;
+                background-color: white;
+                width: 120px;
+            }
+            .list{
+                margin: 0 -25px;
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    margin: 0;
+                    list-style: none;
+                    li{
+                        padding: 0 25px;
+                        .foto{
+                            background-color: rgb(25,27,28);
+                            padding: 55px 22px;
+                        }
+                        .text{
+                            padding: 25px 0;
+                            h3{
+                                font-size: 18px;
+                                font-family: Playfair-Italic;
+                                font-weight: 400;
+                            }
+                         p{
+                                font-size: 16px;
+                                font-family: Playfair-Italic;
+                                font-weight: 700;
+                             color: rgb(208,208,208);
+                             margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .catalog{
+            width: 45%;
+            background-image: url("../img/background/catalog.png");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 100px;
+            .title{
+                h1{
+                    font-size: 36px;
+                    font-family: Playfair;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+            }
+            hr{
+                background-color: white;
+                margin: 30px auto;
+                width: 120px;
+            }
+            .btnCatalog{
+                button{
+                    padding: 12px 30px;
+                    background: none;
+                    border: 2px solid white;
+                    font-size: 18px;
+                    font-family: PTSans;
+                    font-weight: 400;
+                    color: white;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .collectionDownLine{
+        display: flex;
+        .seasonDown{
+            width: 45%;
+            background-image: url("../img/background/season.png") ;
+            background-size: cover;
+        }
+        .colection2018{
+            color: white;
+            width: 55%;
+            padding: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title{
+                h1{
+                    text-transform: uppercase;
+                    font-size: 36px;
+                    font-family: Playfair;
+                    font-weight: 400;
+                }
+            }
+            hr{
+                width: 120px;
+                background-color: white;
+                margin: 40px auto;
+            }
+            .text{
+                width: 470px;
+                text-align: center;
+                p{
+                    font-size: 14px;
+                    font-family: PTSans;
+                    font-weight: 400;
+                }
+            }
+            .btnColection{
+                margin-top: 60px;
+                button{
+                    color: white;
+                    text-transform: uppercase;
+                    background:none;
+                    padding: 12px 28px;
+                    border: 2px solid white;
+                    font-family: PTSans;
+                    font-size: 18px;
+
+                }
+            }
+        }
+    }
+    .newArrivals{
+        padding: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        .col-xl-12{
+            padding: 0;
+        }
+        .title{
+            text-align: center;
+            h1{
+                font-size: 36px;
+                font-family: Playfair;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+        hr{
+            margin: 40px auto 80px;
+        }
+
+        .listArrivals{
+            margin: 0 -25px -20px;
+            ul{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin: 0;
+                list-style: none;
+                li{
+                    margin: 0 12px 20px;
+                    .foto{
+                        background-color: rgb(25,27,28);
+                        padding: 55px 22px;
+                    }
+                    .text{
+                        padding: 25px 0;
+                        h3{
+                            font-size: 18px;
+                            font-family: Playfair-Italic;
+                            font-weight: 400;
+                        }
+                        p{
+                            font-size: 16px;
+                            font-family: Playfair-Italic;
+                            font-weight: 700;
+                            color: rgb(208,208,208);
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    .ourBrands{
+        background-color: rgb(15,15,15);
+        padding: 60px;
+        hr{
+           margin: 40px auto;
+        }
+        .listBrands{
+            ul{
+                display: flex;
+                margin:0 -15px;
+                li{
+                    margin: 0 15px;
+                }
             }
         }
     }

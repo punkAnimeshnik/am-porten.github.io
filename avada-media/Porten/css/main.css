@@ -2,6 +2,18 @@
   font-family: PTSans;
   src: url(../fonts/PTSans/PTSans-Regular.ttf);
 }
+@font-face {
+  font-family: Playfair;
+  src: url(../fonts/PlayfairDisplay/static/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: Playfair-Italic;
+  src: url(../fonts/PlayfairDisplay/static/PlayfairDisplay-MediumItalic.ttf);
+}
+@font-face {
+  font-family: Playfair-Bold;
+  src: url(../fonts/PlayfairDisplay/static/PlayfairDisplay-Bold.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +21,20 @@
   text-decoration: none;
   box-sizing: border-box;
   border-collapse: collapse;
+  list-style: none;
+}
+hr {
+  background-color: white;
+  width: 120px;
+}
+.title {
+  color: white;
+  text-align: center;
+}
+.title h1 {
+  font-size: 36px;
+  font-family: Playfair;
+  text-transform: uppercase;
 }
 header .container {
   padding: 0;
@@ -148,4 +174,208 @@ header .banner .text {
 header .banner .text p {
   font-family: PTSans;
   font-size: 16px;
+}
+main {
+  background-color: black;
+}
+main .collectionsUpLine {
+  display: flex;
+  color: white;
+}
+main .collectionsUpLine .season {
+  width: 55%;
+  padding: 93px 80px;
+}
+main .collectionsUpLine .season .title {
+  display: flex;
+  justify-content: center;
+}
+main .collectionsUpLine .season .title h1 {
+  font-size: 36px;
+  font-family: Playfair-Bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+main .collectionsUpLine .season hr {
+  margin: 50px auto;
+  background-color: white;
+  width: 120px;
+}
+main .collectionsUpLine .season .list {
+  margin: 0 -25px;
+}
+main .collectionsUpLine .season .list ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  list-style: none;
+}
+main .collectionsUpLine .season .list ul li {
+  padding: 0 25px;
+}
+main .collectionsUpLine .season .list ul li .foto {
+  background-color: #191b1c;
+  padding: 55px 22px;
+}
+main .collectionsUpLine .season .list ul li .text {
+  padding: 25px 0;
+}
+main .collectionsUpLine .season .list ul li .text h3 {
+  font-size: 18px;
+  font-family: Playfair-Italic;
+  font-weight: 400;
+}
+main .collectionsUpLine .season .list ul li .text p {
+  font-size: 16px;
+  font-family: Playfair-Italic;
+  font-weight: 700;
+  color: #d0d0d0;
+  margin: 0;
+}
+main .collectionsUpLine .catalog {
+  width: 45%;
+  background-image: url("../img/background/catalog.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 100px;
+}
+main .collectionsUpLine .catalog .title h1 {
+  font-size: 36px;
+  font-family: Playfair;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+main .collectionsUpLine .catalog hr {
+  background-color: white;
+  margin: 30px auto;
+  width: 120px;
+}
+main .collectionsUpLine .catalog .btnCatalog button {
+  padding: 12px 30px;
+  background: none;
+  border: 2px solid white;
+  font-size: 18px;
+  font-family: PTSans;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+}
+main .collectionDownLine {
+  display: flex;
+}
+main .collectionDownLine .seasonDown {
+  width: 45%;
+  background-image: url("../img/background/season.png");
+  background-size: cover;
+}
+main .collectionDownLine .colection2018 {
+  color: white;
+  width: 55%;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .collectionDownLine .colection2018 .title h1 {
+  text-transform: uppercase;
+  font-size: 36px;
+  font-family: Playfair;
+  font-weight: 400;
+}
+main .collectionDownLine .colection2018 hr {
+  width: 120px;
+  background-color: white;
+  margin: 40px auto;
+}
+main .collectionDownLine .colection2018 .text {
+  width: 470px;
+  text-align: center;
+}
+main .collectionDownLine .colection2018 .text p {
+  font-size: 14px;
+  font-family: PTSans;
+  font-weight: 400;
+}
+main .collectionDownLine .colection2018 .btnColection {
+  margin-top: 60px;
+}
+main .collectionDownLine .colection2018 .btnColection button {
+  color: white;
+  text-transform: uppercase;
+  background: none;
+  padding: 12px 28px;
+  border: 2px solid white;
+  font-family: PTSans;
+  font-size: 18px;
+}
+main .newArrivals {
+  padding: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+main .newArrivals .col-xl-12 {
+  padding: 0;
+}
+main .newArrivals .title {
+  text-align: center;
+}
+main .newArrivals .title h1 {
+  font-size: 36px;
+  font-family: Playfair;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+main .newArrivals hr {
+  margin: 40px auto 80px;
+}
+main .newArrivals .listArrivals {
+  margin: 0 -25px -20px;
+}
+main .newArrivals .listArrivals ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  list-style: none;
+}
+main .newArrivals .listArrivals ul li {
+  margin: 0 12px 20px;
+}
+main .newArrivals .listArrivals ul li .foto {
+  background-color: #191b1c;
+  padding: 55px 22px;
+}
+main .newArrivals .listArrivals ul li .text {
+  padding: 25px 0;
+}
+main .newArrivals .listArrivals ul li .text h3 {
+  font-size: 18px;
+  font-family: Playfair-Italic;
+  font-weight: 400;
+}
+main .newArrivals .listArrivals ul li .text p {
+  font-size: 16px;
+  font-family: Playfair-Italic;
+  font-weight: 700;
+  color: #d0d0d0;
+  margin: 0;
+}
+main .ourBrands {
+  background-color: #0f0f0f;
+  padding: 60px;
+}
+main .ourBrands hr {
+  margin: 40px auto;
+}
+main .ourBrands .listBrands ul {
+  display: flex;
+  margin: 0 -15px;
+}
+main .ourBrands .listBrands ul li {
+  margin: 0 15px;
 }
