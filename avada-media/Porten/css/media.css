@@ -1,0 +1,162 @@
+@media (max-width: 1440px) {
+  main .collectionsUpLine .season {
+    width: 59%;
+  }
+  main .collectionsUpLine .season .list {
+    margin: 0 -10px;
+  }
+  main .collectionsUpLine .season .list ul li {
+    padding: 0 10px;
+  }
+  main .collectionsUpLine .season .list ul li .foto {
+    padding: 25px 5px;
+  }
+  main .collectionsUpLine .catalog {
+    width: 41%;
+  }
+  main .collectionDownLine .seasonDown {
+    width: 43%;
+  }
+  main .collectionDownLine .colection2018 {
+    width: 57%;
+  }
+  main .newArrivals .listArrivals {
+    margin: 0 -25px -20px;
+  }
+  main .newArrivals .listArrivals ul li {
+    width: 22%;
+    margin: 0 12px 20px;
+  }
+  main .newArrivals .listArrivals ul li .foto {
+    padding: 55px 22px;
+  }
+}
+@media (max-width: 1200px) {
+  main .collectionsUpLine .season {
+    width: 60%;
+  }
+  main .collectionsUpLine .season .list {
+    margin: 0 -5px;
+  }
+  main .collectionsUpLine .season .list ul li {
+    padding: 0 5px;
+  }
+  main .collectionsUpLine .season .list ul li .foto {
+    padding: 25px 5px;
+  }
+  main .collectionsUpLine .catalog {
+    width: 40%;
+  }
+  main .newArrivals .listArrivals ul li .foto {
+    padding: 40px 10px;
+  }
+}
+@media (max-width: 1024px) {
+  header .navMenu {
+    justify-content: flex-end;
+  }
+  main .collectionsUpLine {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main .collectionsUpLine .season {
+    width: 100%;
+  }
+  main .collectionsUpLine .season .list {
+    margin: 0 -20px;
+  }
+  main .collectionsUpLine .season .list ul li {
+    padding: 0 20px;
+  }
+  main .collectionsUpLine .season .list ul li .foto {
+    padding: 25px 10px;
+  }
+  main .collectionsUpLine .catalog {
+    width: 100%;
+  }
+  main .newArrivals .listArrivals ul li {
+    width: 35%;
+    margin: 20px auto;
+  }
+  main .newArrivals .listArrivals ul li .foto {
+    width: 275px;
+    padding: 50px 25px;
+  }
+  main .ourBrands .listBrands ul {
+    display: flex;
+    margin: 0 0 0 -75px;
+  }
+  main .ourBrands .listBrands ul li {
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  main .collectionsUpLine .season .list {
+    margin: 0 -10px;
+  }
+  main .collectionsUpLine .season .list ul li {
+    padding: 0 10px;
+  }
+  main .collectionsUpLine .season .list ul li .foto {
+    padding: 15px 5px;
+  }
+  main .collectionDownLine {
+    margin-top: 25px;
+  }
+  main .collectionDownLine .seasonDown {
+    width: 100%;
+    margin-right: -100%;
+  }
+  main .collectionDownLine .colection2018 {
+    width: 100%;
+  }
+  main .newArrivals .listArrivals ul {
+    margin: -20px;
+  }
+  main .newArrivals .listArrivals ul li {
+    width: 40%;
+    margin: 20px 20px;
+  }
+  main .newArrivals .listArrivals ul li .foto {
+    width: 275px;
+    padding: 50px 25px;
+  }
+  main .ourBrands .listBrands ul {
+    margin: -10px auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  main .ourBrands .listBrands ul li {
+    margin: 10px auto;
+  }
+  footer .footerBaner {
+    padding: 40px 10px 50px;
+  }
+  footer .footerBaner .title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  footer .footerBaner .title h1 {
+    font-size: 22px;
+  }
+  footer .footerBaner .tags {
+    margin: -5px;
+  }
+  footer .footerBaner .tags a {
+    margin: 5px;
+  }
+  footer .footerBaner .col-md {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .footerBaner .textForm {
+    width: 40%;
+  }
+  footer .footerBaner .form {
+    margin-top: 40px;
+    width: 55%;
+  }
+  footer .footerBaner .form input::-webkit-input-placeholder {
+    color: #0f0f0f;
+  }
+}
