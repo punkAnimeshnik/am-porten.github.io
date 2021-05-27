@@ -154,6 +154,9 @@ header .navMenu .menu .tool i {
 header .navMenu .menu .tool i:hover {
   cursor: pointer;
 }
+header .mobileHead {
+  display: none;
+}
 header .banner {
   padding: 160px 0;
   background-image: url("../img/background/bunner.png");
@@ -336,6 +339,21 @@ main .newArrivals .title h1 {
 }
 main .newArrivals hr {
   margin: 40px auto 80px;
+}
+main .newArrivals .arrows i {
+  margin: -40px -25px;
+  display: none;
+  position: relative;
+  top: 350px;
+  font-size: 48px;
+}
+main .newArrivals .arrows .fa-chevron-left {
+  position: absolute;
+  left: -50px;
+}
+main .newArrivals .arrows .fa-chevron-right {
+  position: absolute;
+  right: -50px;
 }
 main .newArrivals .listArrivals {
   margin: 0 -25px -20px;

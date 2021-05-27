@@ -74,12 +74,32 @@
   main .collectionsUpLine .catalog {
     width: 100%;
   }
-  main .newArrivals .listArrivals ul li {
-    width: 35%;
-    margin: 20px auto;
+  main .newArrivals .arrows i {
+    display: block;
   }
-  main .newArrivals .listArrivals ul li .foto {
-    width: 275px;
+  main .newArrivals .slider-box {
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    width: 810px;
+    margin: 0 auto;
+  }
+  main .newArrivals .slider-box .slider-body-new {
+    position: relative;
+    transition: 0.5s;
+  }
+  main .newArrivals .slider-box .slider-body-new ul {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  main .newArrivals .slider-box .slider-body-new ul li {
+    width: 250px;
+    margin: 0 10px;
+  }
+  main .newArrivals .slider-box .slider-body-new ul li .foto {
+    width: 250px;
     padding: 50px 25px;
   }
   main .ourBrands .listBrands ul {
@@ -110,16 +130,8 @@
   main .collectionDownLine .colection2018 {
     width: 100%;
   }
-  main .newArrivals .listArrivals ul {
-    margin: -20px;
-  }
-  main .newArrivals .listArrivals ul li {
-    width: 40%;
-    margin: 20px 20px;
-  }
-  main .newArrivals .listArrivals ul li .foto {
-    width: 275px;
-    padding: 50px 25px;
+  main .newArrivals .slider-box {
+    width: 540px;
   }
   main .ourBrands .listBrands ul {
     margin: -10px auto;
@@ -158,5 +170,302 @@
   }
   footer .footerBaner .form input::-webkit-input-placeholder {
     color: #0f0f0f;
+  }
+}
+@media (max-width: 425px) {
+  html {
+    background-color: black;
+  }
+  header {
+    background-color: black;
+  }
+  header .top,
+  header .navMenu {
+    display: none;
+  }
+  header .mobileHead {
+    display: block;
+    background-color: black;
+    color: white;
+  }
+  header .mobileHead .mobileTop {
+    display: flex;
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 100;
+  }
+  header .mobileHead .mobileTop .logo {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    height: 120px;
+    width: auto;
+  }
+  header .mobileHead .mobileTop .logo img {
+    height: 40px;
+  }
+  header .mobileHead .mobileTop .icons {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+  }
+  header .mobileHead .mobileTop .icons i {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 44px;
+  }
+  header .mobileHead .mobileTop .icons .fa-times {
+    display: none;
+  }
+  header .mobileHead .mobileNav {
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    top: 75px;
+    right: 100%;
+    width: 100%;
+    padding: 15px 0;
+    transition: 0.5s;
+  }
+  header .mobileHead .mobileNav .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .mobileHead .mobileNav .input i {
+    font-size: 24px;
+    margin: 0 15px;
+  }
+  header .mobileHead .mobileNav .input p {
+    font-family: PTSans;
+    margin: 0;
+  }
+  header .mobileHead .mobileNav .input p a {
+    font-size: 24px;
+    color: white;
+  }
+  header .mobileHead .mobileNav .menu {
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+  }
+  header .mobileHead .mobileNav .menu .nav {
+    padding: 25px 0;
+  }
+  header .mobileHead .mobileNav .menu .nav ul li {
+    padding: 0;
+    text-transform: uppercase;
+    font-family: PTSans;
+  }
+  header .mobileHead .mobileNav .menu .tool i {
+    padding: 0 15px;
+    font-size: 36px;
+  }
+  header .mobileHead .mobileNav .info {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 18px;
+  }
+  header .mobileHead .mobileNav .info .phone {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  header .mobileHead .mobileNav .info .phone i {
+    margin: 0 15px;
+  }
+  header .mobileHead .mobileNav .info .phone p {
+    font-family: PTSans;
+    margin: 0;
+  }
+  header .mobileHead .mobileNav .info .workday p {
+    font-family: PTSans;
+    margin: 0;
+  }
+  header .mobileHead .mobileNav .info .worktime p {
+    font-family: PTSans;
+    margin: 0;
+  }
+  header .banner {
+    margin-top: 75px;
+  }
+  header .banner .text {
+    padding: 0 15px;
+  }
+  header .banner .text p {
+    font-size: 14px;
+  }
+  main .collectionsUpLine .slider-box {
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    width: 270px;
+    margin: 0 auto;
+  }
+  main .collectionsUpLine .slider-box .slider-body-season {
+    position: relative;
+    transition: 0.5s;
+  }
+  main .collectionsUpLine .slider-box .slider-body-season ul {
+    position: relative;
+  }
+  main .collectionsUpLine .slider-box .slider-body-season ul li {
+    width: 250px;
+    margin: 0 10px;
+  }
+  main .collectionsUpLine .slider-box .slider-body-season ul li .foto {
+    width: 250px;
+    padding: 50px 25px;
+  }
+  main .collectionDownLine .colection2018 .title {
+    width: 270px;
+  }
+  main .collectionDownLine .colection2018 .title h1 {
+    font-size: 30px;
+  }
+  main .collectionDownLine .colection2018 .text {
+    width: 370px;
+  }
+  main .collectionDownLine .colection2018 .text p {
+    margin: 0;
+    font-size: 14px;
+  }
+  main .collectionDownLine .colection2018 .btnColection button {
+    width: 320px;
+  }
+  main .newArrivals .title {
+    position: relative;
+    left: -30%;
+    text-align: center;
+    width: 320px;
+  }
+  main .newArrivals .arrows {
+    display: none;
+  }
+  main .newArrivals .slider-box {
+    position: relative;
+    right: 20%;
+    width: 270px;
+  }
+  main .ourBrands .slider-box {
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    width: 270px;
+    margin: 0 auto;
+  }
+  main .ourBrands .slider-box .slider-body-brands {
+    position: relative;
+    right: 0;
+    transition: 0.5s;
+  }
+  main .ourBrands .slider-box .slider-body-brands ul {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  main .ourBrands .slider-box .slider-body-brands ul li {
+    width: 250px;
+    margin: 0 10px;
+  }
+  footer .footerBaner .col-md {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  footer .footerBaner .col-md .textForm {
+    width: 100%;
+  }
+  footer .footerBaner .col-md .form {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 375px) {
+  main .collectionsUpLine .season {
+    padding: 93px 50px;
+  }
+  main .collectionDownLine .colection2018 .title {
+    width: 270px;
+  }
+  main .collectionDownLine .colection2018 .title h1 {
+    font-size: 30px;
+  }
+  main .collectionDownLine .colection2018 .text {
+    width: 370px;
+    padding: 5px;
+  }
+  main .collectionDownLine .colection2018 .text p {
+    margin: 0;
+    font-size: 14px;
+  }
+  main .newArrivals {
+    padding: 120px 50px;
+  }
+  main .newArrivals .title {
+    left: -25px;
+  }
+  main .newArrivals .slider-box {
+    right: 0;
+  }
+  main .ourBrands {
+    padding: 60px 40px;
+  }
+  main .ourBrands .title {
+    width: 275px;
+    position: relative;
+  }
+}
+@media (max-width: 320px) {
+  main .collectionsUpLine .season {
+    padding: 93px 20px;
+  }
+  main .collectionDownLine .colection2018 .title {
+    width: 270px;
+  }
+  main .collectionDownLine .colection2018 .title h1 {
+    font-size: 30px;
+  }
+  main .collectionDownLine .colection2018 .text {
+    width: 300px;
+    padding: 5px;
+  }
+  main .collectionDownLine .colection2018 .text p {
+    margin: 0;
+    font-size: 14px;
+  }
+  main .collectionDownLine .colection2018 .btnColection button {
+    width: 300px;
+  }
+  main .newArrivals {
+    padding: 120px 25px;
+  }
+  main .newArrivals .title {
+    left: -25px;
+  }
+  main .newArrivals .slider-box {
+    right: 0;
+  }
+  main .ourBrands {
+    padding: 60px 10px;
+  }
+  main .ourBrands .title {
+    width: 275px;
+    position: relative;
+  }
+  footer .footerBaner .col-md .form form {
+    flex-direction: column;
+  }
+  footer .footerBaner .col-md .form form input,
+  footer .footerBaner .col-md .form form button {
+    width: 270px;
   }
 }

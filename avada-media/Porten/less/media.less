@@ -128,20 +128,44 @@ header{
 
     }
     .newArrivals{
+.arrows{
+  i{
+    display: block;
+  }
+}
+      .slider-box{
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        width: 810px;
+        margin: 0 auto;
 
-      .listArrivals{
 
-        ul{
-          li{
-            width: 35%;
-            margin: 20px auto;
-            .foto{
-              width: 275px;
-              padding: 50px 25px;
+
+        .slider-body-new{
+          position: relative;
+          transition: 0.5s;
+
+          ul{
+            position: relative;
+
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin: 0;
+            li{
+
+              width: 250px;
+              margin: 0 10px;
+              .foto{
+                width: 250px;
+                padding: 50px 25px;
+              }
+
             }
-
           }
         }
+
+
 
       }
     }
@@ -191,21 +215,8 @@ main{
   }
   .newArrivals{
 
-    .listArrivals{
-
-      ul{
-        margin: -20px;
-        li{
-          width: 40%;
-          margin: 20px 20px;
-          .foto{
-            width: 275px;
-            padding: 50px 25px;
-          }
-
-        }
-      }
-
+    .slider-box{
+      width: 540px;
     }
   }
   .ourBrands{
@@ -258,13 +269,391 @@ main{
   }
 }
 @media (max-width: 425px) {
+  html{
+    background-color: black;
+  }
+header{
+  background-color: black;
+  .top, .navMenu{
+    display: none;
+  }
+  .mobileHead{
+    display: block;
+    background-color: black;
+    color: white;
+    .mobileTop{
+      display: flex;
+      height: 75px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.95);
+      z-index: 100;
+      .logo{
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        height: 120px;
+        width: auto;
+        img{
+          height: 40px;
+        }
+      }
+      .icons{
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        i{
+          position: fixed;
+          top: 15px;
+          right: 15px;
+          font-size: 44px;
+        }
+        .fa-times{
+          display: none;
+        }
+      }
+    }
+    .mobileNav{
+      //display: none;
+      z-index: 100;
+      background-color: rgba(0,0,0,0.95);
+      position:fixed;
+      top: 75px;
+      right: 100%;
+      width: 100%;
+      padding: 15px 0;
+      transition: 0.5s;
+     .input{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       i{
+         font-size: 24px;
+         margin: 0 15px;
+       }
+       p{
+         font-family: PTSans;
+         margin: 0;
+         a{
+           font-size: 24px;
+           color: white;
+
+         }
+
+       }
+
+     }
+      .menu{
+        margin-top: 10px;
+       text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 24px;
+        .nav{
+          padding: 25px 0;
+          ul{
+            li{
+              padding: 0;
+              text-transform: uppercase;
+              font-family: PTSans;
+            }
+          }
+        }
+        .tool{
+          i{
+            padding: 0 15px;
+            font-size: 36px;
+          }
+        }
+      }
+      .info{
+        margin-top: 25px;
+      text-align: center;
+        font-size: 18px;
+        .phone{
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          i{
+           margin: 0 15px;
+          };
+          p{
+            font-family: PTSans;
+            margin: 0;
+          }
+        }
+        .workday{
+          p{
+            font-family: PTSans;
+            margin: 0;
+          }
+        }
+        .worktime{
+          p{
+            font-family: PTSans;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  .banner{
+    margin-top: 75px;
+    .text{
+      padding: 0 15px;
+      p{
+        font-size: 14px;
+      }
+    }
+  }
 
 }
+main{
+  .collectionsUpLine{
+    .slider-box{
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-start;
+      width: 270px;
+      margin: 0 auto;
 
+
+
+      .slider-body-season{
+        position: relative;
+        transition: 0.5s;
+
+        ul{
+          position: relative;
+          li{
+
+            width: 250px;
+            margin: 0 10px;
+            .foto{
+              width: 250px;
+              padding: 50px 25px;
+            }
+
+          }
+        }
+      }
+
+
+
+    }
+  }
+  .collectionDownLine{
+    .colection2018{
+      .title{
+        width: 270px;
+        h1{
+          font-size: 30px;
+        }
+      }
+      .text{
+
+        width: 370px;
+
+        p{
+          margin: 0;
+          font-size: 14px;
+        }
+      }
+      .btnColection{
+        button{
+          width: 320px;
+        }
+      }
+    }
+  }
+  .newArrivals{
+    .title{
+      position: relative;
+      left: -30%;
+      text-align: center;
+      width: 320px;
+    }
+    .arrows{
+
+        display: none;
+          }
+    .slider-box{
+      position: relative;
+      right: 20%;
+      width: 270px;
+    }
+  }
+  .ourBrands{
+    .slider-box{
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-start;
+      width: 270px;
+      margin: 0 auto;
+
+
+
+      .slider-body-brands{
+        position: relative;
+        right: 0;
+        transition: 0.5s;
+
+        ul{
+          position: relative;
+
+          flex-direction: row;
+          flex-wrap: nowrap;
+          margin: 0;
+          li{
+
+            width: 250px;
+            margin: 0 10px;
+
+          }
+        }
+      }
+
+
+
+    }
+  }
+}
+footer{
+.footerBaner{
+  .col-md{
+    flex-direction: column;
+    margin-top: 15px;
+
+    .textForm{
+      width: 100%;
+
+    }
+    .form{
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+}
+}
 @media (max-width: 375px) {
 
+  main{
+    .collectionsUpLine{
+      .season{
+        padding: 93px 50px;
+      }
+    }
+    .collectionDownLine{
+      .colection2018{
+        .title{
+          width: 270px;
+          h1{
+            font-size: 30px;
+          }
+        }
+        .text{
+
+          width: 370px;
+          padding: 5px;
+
+          p{
+            margin: 0;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .newArrivals{
+      padding: 120px 50px;
+      .title{
+
+        left: -25px;
+      }
+
+      .slider-box{
+        right: 0;
+      }
+    }
+    .ourBrands{
+      padding: 60px 40px;
+     .title{
+       width: 275px;
+       position: relative;
+       //left: -30px;
+     }
+    }
+  }
 }
 
 @media (max-width: 320px) {
+  main{
+    .collectionsUpLine{
+      .season{
+        padding: 93px 20px;
+      }
+    }
+    .collectionDownLine{
+      .colection2018{
+        .title{
+          width: 270px;
+          h1{
+            font-size: 30px;
+          }
+        }
+        .text{
 
+          width: 300px;
+          padding: 5px;
+
+          p{
+            margin: 0;
+            font-size: 14px;
+          }
+        }
+        .btnColection{
+          button{
+            width: 300px;
+          }
+        }
+      }
+
+    }
+    .newArrivals{
+      padding: 120px 25px;
+      .title{
+
+        left: -25px;
+      }
+
+      .slider-box{
+        right: 0;
+      }
+    }
+    .ourBrands{
+      padding: 60px 10px;
+      .title{
+        width: 275px;
+        position: relative;
+
+      }
+    }
+  }
+  footer{
+    .footerBaner{
+      .col-md{
+        .form{
+          form{
+            flex-direction: column;
+            input,button{
+              width: 270px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
