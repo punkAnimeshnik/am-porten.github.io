@@ -9,6 +9,7 @@ let Menu = document.getElementsByClassName("mobileNav")
 let positionNEW = 0, positionSEASON=0,positionBrands;
 let newOLD, seasonOLD,brandsOLD;
 let maxNEW, maxSEASON=1080, maxBRANDS=810;
+let paddingItem = ((this.innerWidth*0.95)-270)/2
 
 /////////////////////////////////
 
@@ -64,6 +65,8 @@ rightNEW.onclick = function () {
 
 }
 
+
+
 /////////////////////////////////
 
 let wight = function(){
@@ -89,25 +92,25 @@ let newScroll = function(event){
 let newStabiliti = function(event){
     let abc = Math.ceil( positionNEW/270);
     if(positionNEW>=-810){
-        positionNEW = -540;
+        positionNEW = -540+paddingItem;
         bodyNew[0].style = " transition: 0.5s; left: "+positionNEW+"px";
         setTimeout(function () {
-            positionNEW = maxNEW;
+            positionNEW = maxNEW+paddingItem;
             bodyNew[0].style = "left: "+positionNEW+"px";
         }, 500)
 
     }
     else if (positionNEW <= -810 &&positionNEW > maxNEW) {
 
-        positionNEW = abc*-270;
+        positionNEW = (abc*-270)-paddingItem;
         positionNEW *= -1;
         bodyNew[0].style = " transition: 0.5s; left: "+positionNEW+"px";
     }
     else if (positionNEW <= maxNEW){
-        positionNEW = maxNEW + 270;
+        positionNEW = maxNEW + 270 +paddingItem;
         bodyNew[0].style = " transition: 0.5s; left: "+positionNEW+"px";
         setTimeout(function () {
-            positionNEW = -810;
+            positionNEW = -810+paddingItem;
             bodyNew[0].style = "left: "+positionNEW+"px";
         },500)
 
@@ -124,25 +127,25 @@ let seasonScroll = function(event){
 let seasonStabiliti = function(event){
         let abc = Math.ceil( positionSEASON/270);
     if(positionSEASON<=540){
-        positionSEASON = 270;
+        positionSEASON = 270-paddingItem;
         bodySEASON[0].style = " transition: 0.5s; right: "+positionSEASON+"px";
 
         setTimeout(function () {
-            positionSEASON = maxSEASON;
+            positionSEASON = maxSEASON-paddingItem;
             bodySEASON[0].style = "right: "+positionSEASON+"px";
         },500)
 
     }
     else if (positionSEASON>=0&&positionSEASON<maxSEASON) {
 
-       positionSEASON= abc*270;
+       positionSEASON= (abc*270)-paddingItem;
         bodySEASON[0].style = " transition: 0.5s; right: "+positionSEASON+"px";
     }
     else if (positionSEASON=>maxSEASON){
-        positionSEASON = maxSEASON + 270;
+        positionSEASON = maxSEASON + 270-paddingItem;
        bodySEASON[0].style = " transition: 0.5s; right: "+positionSEASON+"px";
        setTimeout(function () {
-            positionSEASON = 540;
+            positionSEASON = 540-paddingItem;
             bodySEASON[0].style = "right: "+positionSEASON+"px";
         },500)
     }
@@ -161,21 +164,21 @@ let brandsScroll = function(event){
 let brandsStabiliti = function(){
     let bac = Math.ceil( positionBrands/270);
     if(positionBrands<=540){
-        positionBrands = 270;
+        positionBrands = 270-paddingItem;
         bodyBrands[0].style = "transition: 0.5s; right: "+positionBrands+"px";
 
         setTimeout(function () {
-            positionBrands = 540;
+            positionBrands = 540-paddingItem;
             bodyBrands[0].style = "right: "+positionBrands+"px";
         },500)
 
     }
     else {
 
-        positionBrands = 540 + 270;
+        positionBrands = 540 + 270-paddingItem;
         bodyBrands[0].style = "transition: 0.5s; right: "+positionBrands+"px";
         setTimeout(function () {
-            positionBrands = 540;
+            positionBrands = 540-paddingItem;
             bodyBrands[0].style = "right: "+positionBrands+"px";
         },500)
 
@@ -210,15 +213,14 @@ bodyBrands[0].addEventListener("touchstart",function (event) {
 setInterval(wight,1000)
 
 setTimeout(function () {
-positionNEW-=540+270;
+positionNEW-=810;
 bodyNew[0].style = "left: "+positionNEW+"px";
 if(this.innerWidth<625){
-    positionSEASON+=540;
+    positionNEW=-810+paddingItem;
+    bodyNew[0].style = "left: "+positionNEW+"px";
+    positionSEASON+=540-paddingItem;
     bodySEASON[0].style = "right: "+positionSEASON+"px";
-     positionBrands+=540;
+    positionBrands = 540-paddingItem;
     bodyBrands[0].style = "right: "+positionBrands+"px";
-
 }
-
-
 },1)

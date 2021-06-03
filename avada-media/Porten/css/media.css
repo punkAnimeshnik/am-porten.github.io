@@ -313,8 +313,8 @@
     overflow: hidden;
     display: flex;
     justify-content: flex-start;
-    width: 270px;
-    margin: 0 auto;
+    width: 95vw;
+    margin: 0 -70px;
   }
   main .collectionsUpLine .season .slider-box .slider-body-season {
     position: relative;
@@ -370,15 +370,15 @@
   }
   main .newArrivals .slider-box {
     position: relative;
-    margin: 0 auto;
-    width: 270px;
+    width: 95vw;
+    margin: 0 -70px;
   }
   main .ourBrands .slider-box {
     overflow: hidden;
     display: flex;
     justify-content: flex-start;
-    width: 270px;
-    margin: 0 auto;
+    width: 95vw;
+    margin: 0 -70px;
   }
   main .ourBrands .slider-box .slider-body-brands {
     position: relative;
@@ -424,6 +424,9 @@
   main .collectionsUpLine .season {
     padding: 93px 50px;
   }
+  main .collectionsUpLine .season .slider-box {
+    margin: 0 -40px;
+  }
   main .collectionDownLine .colection2018 .title {
     width: 270px;
   }
@@ -446,6 +449,7 @@
   }
   main .newArrivals .slider-box {
     right: 0;
+    margin: 0 -40px;
   }
   main .ourBrands {
     padding: 60px 40px;
@@ -454,10 +458,16 @@
     width: 275px;
     position: relative;
   }
+  main .ourBrands .slider-box {
+    margin: 0 -40px;
+  }
 }
 @media (max-width: 320px) {
   main .collectionsUpLine .season {
     padding: 93px 20px;
+  }
+  main .collectionsUpLine .season .slider-box {
+    margin: 0 -10px;
   }
   main .collectionDownLine .colection2018 .title {
     width: 270px;
@@ -484,6 +494,7 @@
   }
   main .newArrivals .slider-box {
     right: 0;
+    margin: 0 -10px;
   }
   main .ourBrands {
     padding: 60px 10px;
@@ -491,6 +502,9 @@
   main .ourBrands .title {
     width: 275px;
     position: relative;
+  }
+  main .ourBrands .slider-box {
+    margin: 0 -10px;
   }
   footer .footerBaner .col-md .form form {
     flex-direction: column;
