@@ -8,8 +8,7 @@ let closeMenu = document.getElementById("close")
 let Menu = document.getElementsByClassName("mobileNav")
 let positionNEW = 0, positionSEASON=0,positionBrands;
 let newOLD, seasonOLD,brandsOLD;
-let maxNEW, maxSEASON=540, maxBRANDS=810;
-
+let maxNEW, maxSEASON=1080, maxBRANDS=810;
 
 /////////////////////////////////
 
@@ -25,113 +24,165 @@ closeMenu.onclick = function(){
 }
 
 leftNEW.onclick = function () {
-    if (positionNEW!=0){
+    let max=maxNEW;
+    if(window.innerWidth<=768){
+      max =  maxNEW+270;
+    }
+
+    if (positionNEW<=-540-270){
         positionNEW+=270;
+
+    bodyNew[0].style = "transition: 0.5s; left: "+positionNEW+"px";
     }
     else {
-        positionNEW=maxNEW
+        positionNEW+=270;
+        bodyNew[0].style = "transition: 0.5s; left: "+positionNEW+"px";
+        setTimeout(function (){positionNEW=max-270
+        bodyNew[0].style = "left: "+positionNEW+"px"},500)
+
+
     }
 
 
-    bodyNew[0].style = "left: "+positionNEW+"px";
 }
 rightNEW.onclick = function () {
-    if (positionNEW!=maxNEW){
+    let min=-540;
+    if(window.innerWidth<=768){
+        min -=270;
+    }
+
+    if (positionNEW>=maxNEW){
         positionNEW-=270;
+        bodyNew[0].style = "transition: 0.5s; left: "+positionNEW+"px";
     }
     else {
-        positionNEW=0
+        positionNEW-=270;
+        bodyNew[0].style = "transition: 0.5s; left: "+positionNEW+"px";
+        setTimeout(function (){positionNEW=min
+            bodyNew[0].style = "left: "+positionNEW+"px"},500)
     }
-    bodyNew[0].style = "left: "+positionNEW+"px";
+
 }
 
 /////////////////////////////////
 
 let wight = function(){
     if (this.innerWidth<=1024&&this.innerWidth>768){
-        maxNEW=-1350;
+        maxNEW=-2160;
     }
-    if(this.innerWidth<=768&&this.innerWidth>425){
-        maxNEW=-1620;
+    if(this.innerWidth<=769&&this.innerWidth>425){
+        maxNEW=-2430;
     }
     if(this.innerWidth<=425) {
-        maxNEW=1890;
+        maxNEW=-2700;
     }
 
 }
 
 let newScroll = function(event){
-    positionNEW+=(newOLD - event.targetTouches[0].clientX)/5
-    //console.log(positionSEASON)
-
-    bodyNew[0].style = "right: "+positionNEW+"px";
+    positionNEW-=(newOLD - event.targetTouches[0].clientX)/5
+  //  console.log(positionNEW+" = "+newOLD+" - "+event.targetTouches[0].clientX)
+    bodyNew[0].style = "left: "+positionNEW+"px";
 
 
 }
 let newStabiliti = function(event){
     let abc = Math.ceil( positionNEW/270);
-    if(positionNEW<=0){
-        positionNEW = 0;
-    }
-    else if (positionNEW>=0&&positionNEW<maxNEW) {
+    if(positionNEW>=-810){
+        positionNEW = -540;
+        bodyNew[0].style = " transition: 0.5s; left: "+positionNEW+"px";
+        setTimeout(function () {
+            positionNEW = maxNEW;
+            bodyNew[0].style = "left: "+positionNEW+"px";
+        }, 500)
 
-        positionNEW= abc*270;
     }
-    else if (positionNEW=>maxNEW){
-        positionNEW = maxNEW;
+    else if (positionNEW <= -810 &&positionNEW > maxNEW) {
+
+        positionNEW = abc*-270;
+        positionNEW *= -1;
+        bodyNew[0].style = " transition: 0.5s; left: "+positionNEW+"px";
+    }
+    else if (positionNEW <= maxNEW){
+        positionNEW = maxNEW + 270;
+        bodyNew[0].style = " transition: 0.5s; left: "+positionNEW+"px";
+        setTimeout(function () {
+            positionNEW = -810;
+            bodyNew[0].style = "left: "+positionNEW+"px";
+        },500)
+
     }
 
-    bodyNew[0].style = "right: "+positionNEW+"px";
-    console.log(positionNEW)
 }
 
 let seasonScroll = function(event){
     positionSEASON+=(seasonOLD - event.targetTouches[0].clientX)/5
-    //console.log(positionSEASON)
-
     bodySEASON[0].style = "right: "+positionSEASON+"px";
 
 
 }
 let seasonStabiliti = function(event){
         let abc = Math.ceil( positionSEASON/270);
-    if(positionSEASON<=0){
-        positionSEASON = 0;
+    if(positionSEASON<=540){
+        positionSEASON = 270;
+        bodySEASON[0].style = " transition: 0.5s; right: "+positionSEASON+"px";
+
+        setTimeout(function () {
+            positionSEASON = maxSEASON;
+            bodySEASON[0].style = "right: "+positionSEASON+"px";
+        },500)
+
     }
     else if (positionSEASON>=0&&positionSEASON<maxSEASON) {
 
        positionSEASON= abc*270;
+        bodySEASON[0].style = " transition: 0.5s; right: "+positionSEASON+"px";
     }
     else if (positionSEASON=>maxSEASON){
-        positionSEASON = maxSEASON;
+        positionSEASON = maxSEASON + 270;
+       bodySEASON[0].style = " transition: 0.5s; right: "+positionSEASON+"px";
+       setTimeout(function () {
+            positionSEASON = 540;
+            bodySEASON[0].style = "right: "+positionSEASON+"px";
+        },500)
     }
 
-    bodySEASON[0].style = "right: "+positionSEASON+"px";
-    console.log(positionSEASON)
+
+
 }
 
 let brandsScroll = function(event){
-    positionBrands+=(brandsOLD - event.targetTouches[0].clientX)/5
+    positionBrands+=(brandsOLD - event.targetTouches[0].clientX)/10
 
     bodyBrands[0].style = "right: "+positionBrands+"px";
 
 
 }
-let brandsStabiliti = function(event){
+let brandsStabiliti = function(){
     let bac = Math.ceil( positionBrands/270);
-    if(positionBrands<=0){
-        positionBrands = 0;
-    }
-    else if (positionBrands>=0&&positionBrands<maxBRANDS) {
+    if(positionBrands<=540){
+        positionBrands = 270;
+        bodyBrands[0].style = "transition: 0.5s; right: "+positionBrands+"px";
 
-        positionBrands= bac*270;
+        setTimeout(function () {
+            positionBrands = 540;
+            bodyBrands[0].style = "right: "+positionBrands+"px";
+        },500)
+
     }
-    else if (positionSEASON=>maxBRANDS){
-        positionBrands = maxBRANDS;
+    else {
+
+        positionBrands = 540 + 270;
+        bodyBrands[0].style = "transition: 0.5s; right: "+positionBrands+"px";
+        setTimeout(function () {
+            positionBrands = 540;
+            bodyBrands[0].style = "right: "+positionBrands+"px";
+        },500)
+
+
     }
 
-    bodyBrands[0].style = "right: "+positionBrands+"px";
-    console.log(positionBrands)
+
 }
 
 ////////////////////////////////////////
@@ -159,7 +210,15 @@ bodyBrands[0].addEventListener("touchstart",function (event) {
 setInterval(wight,1000)
 
 setTimeout(function () {
-positionNEW-=270;
-positionNEW+=270;
-    bodyNew[0].style = "left: "+positionNEW+"px";
+positionNEW-=540+270;
+bodyNew[0].style = "left: "+positionNEW+"px";
+if(this.innerWidth<625){
+    positionSEASON+=540;
+    bodySEASON[0].style = "right: "+positionSEASON+"px";
+     positionBrands+=540;
+    bodyBrands[0].style = "right: "+positionBrands+"px";
+
+}
+
+
 },1)

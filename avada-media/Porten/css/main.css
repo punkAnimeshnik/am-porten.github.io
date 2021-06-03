@@ -182,6 +182,9 @@ header .banner .text p {
 main {
   background-color: black;
 }
+main .fantom {
+  display: none;
+}
 main .collectionsUpLine {
   display: flex;
   color: white;
