@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Open_Sans;
+  src: url(../fonts/Open_Sans_Condensed/OpenSansCondensed-Bold.ttf);
+}
+@font-face {
+  font-family: Open Sans Light;
+  src: url(../fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +14,288 @@
   box-sizing: border-box;
   border-collapse: collapse;
   list-style: none;
+}
+header {
+  background-image: url("../img/background/buner.jpg");
+  color: white;
+  padding-top: 50px;
+}
+header .leftLine {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 100vh;
+  padding: 90px 0;
+  background: rgba(51, 51, 51, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+header .leftLine .text h3 {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 18px;
+  font-family: Open_Sans;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c4c4c4;
+}
+header .leftLine hr {
+  width: 80px;
+  transform: rotate(90deg);
+  margin: 80px 0;
+  background-color: white;
+}
+header .leftLine .social ul {
+  margin: -30px 0;
+}
+header .leftLine .social ul li {
+  margin: 30px 0;
+  text-align: center;
+}
+header .leftLine .social ul li i {
+  font-size: 26px;
+}
+header .leftLine .social ul li i:hover {
+  color: #d1a954;
+  cursor: pointer;
+}
+header .navMenu .menu {
+  padding: 0;
+}
+header .navMenu .menu nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+header .navMenu .menu nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: Open_Sans;
+  letter-spacing: 0.1em;
+}
+header .navMenu .menu nav ul li a p {
+  margin: 0;
+}
+header .navMenu .phone {
+  display: flex;
+  justify-content: flex-end;
+}
+header .navMenu .phone p {
+  font-size: 16px;
+  font-family: Open_Sans;
+  letter-spacing: 0.05em;
+  line-height: 15px;
+  margin: 0;
+  height: 20px;
+  border-bottom: 2px solid #d1a954;
+}
+header .buner {
+  padding: 200px 0 175px;
+}
+header .buner .afisha {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+header .buner .afisha .title h1 {
+  font-family: Open_Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 87px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+header .buner .afisha .text {
+  margin: 50px auto;
+}
+header .buner .afisha .text p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+}
+header .buner .afisha .button button {
+  width: 160px;
+  height: 50px;
+  background: #D1A954;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+header .buner .afisha .button button h2 {
+  font-family: Open_Sans;
+  margin-top: 7px;
+  font-size: 18px;
+  line-height: 25px;
+  color: white;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+header .buner .slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .buner .slider .slider-box .slider-buner-body ul li {
+  background-image: url("../img/foto/item-buner.jpg");
+}
+header .buner .slider .slider-box .slider-buner-body ul li .item {
+  background: rgba(209, 169, 84, 0.85);
+}
+header .buner .slider .slider-box .slider-buner-body ul li .item img {
+  position: relative;
+  left: -20px;
+  top: -20px;
+}
+header .buner .slider .slider-arrows {
+  width: 375px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .buner .slider .slider-arrows .prew,
+header .buner .slider .slider-arrows .next {
+  display: flex;
+}
+header .buner .slider .slider-arrows .prew p,
+header .buner .slider .slider-arrows .next p {
+  margin: 25px;
+  font-family: Open_Sans;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  vertical-align: center;
+}
+header .buner .slider .slider-arrows:hover {
+  cursor: pointer;
+}
+main {
+  background: #333333;
+  color: white;
+}
+main .title {
+  justify-content: center;
+  display: flex;
+}
+main .title h1 {
+  font-family: Open Sans Light;
+  font-size: 48px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px;
+}
+main .yellowSubmarin {
+  color: #D1A954;
+}
+main .aboutTheatre {
+  padding: 150px 0 50px;
+}
+main .aboutTheatre .container {
+  padding: 100px 0 0;
+}
+main .aboutTheatre .container .subtitle {
+  padding-bottom: 40px;
+}
+main .aboutTheatre .container .subtitle h3 {
+  font-family: Open_Sans;
+  font-size: 21px;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+}
+main .aboutTheatre .container .text p {
+  font-size: 14px;
+}
+main .aboutTheatre .container .icons .items .item {
+  margin-bottom: 25px;
+}
+main .aboutTheatre .container .icons .items .item .sub {
+  padding-top: 10px;
+  display: flex;
+}
+main .aboutTheatre .container .icons .items .item .sub p {
+  padding: 2px;
+  margin: 0;
+}
+main .aboutTheatre .container .foto {
+  padding: 0;
+}
+main .aboutTheatre .container .foto img {
+  width: 100%;
+}
+main .ourDeliveries {
+  padding: 100px 0;
+}
+main .ourDeliveries .slider-box {
+  margin-top: 100px;
+  margin-left: 150px;
+}
+main .ourDeliveries .slider-box .slider-our-body ul {
+  display: flex;
+}
+main .ourDeliveries .slider-box .slider-our-body ul li .item {
+  height: 500px;
+  overflow: hidden;
+}
+main .ourDeliveries .slider-box .slider-our-body ul li .item .foto img {
+  width: 410px;
+}
+main .ourDeliveries .slider-box .slider-our-body ul li .item .hover {
+  position: relative;
+  top: -500px;
+  height: 1000px;
+  transition: 0.5s;
+}
+main .ourDeliveries .slider-box .slider-our-body ul li .item .hover .face {
+  padding: 40px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+main .ourDeliveries .slider-box .slider-our-body ul li .item .hover .face .subtitle h2 {
+  font-family: Open_Sans;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+main .ourDeliveries .slider-box .slider-our-body ul li .item .hover .face .text {
+  font-family: Open_Sans;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  position: relative;
+  top: 50%;
+  left: -45%;
+}
+main .ourDeliveries .slider-box .slider-our-body ul li .item .hover .back {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .ourDeliveries .slider-box .slider-our-body ul li .item .hover .back .zoom {
+  border-radius: 100% ;
+  background: #d1a954;
+  width: 100px;
+  height: 100px;
+  padding: 35px;
+}
+main .ourDeliveries .slider-box .slider-our-body ul li .item .hover .back .zoom:hover {
+  cursor: pointer;
+}
+main .ourDeliveries .slider-box .slider-our-body ul li .item .hover:hover {
+  top: -1000px;
+  transition: 0.5s;
 }
