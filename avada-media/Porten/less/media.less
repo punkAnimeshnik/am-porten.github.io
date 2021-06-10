@@ -193,8 +193,23 @@ header{
 }
 
 /*Tablet version*/
-
+@media (max-width: 1024px) {
+  body{
+    overflow-x: hidden;
+  }
+}
 @media (max-width: 950px) {
+  header{
+    .navMenu{
+      .menu{
+        .tool{
+          img{
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+  }
 main{
   .collectionsUpLine{
     .season{
@@ -276,6 +291,30 @@ main{
           color: #0f0f0f;;
         }
 
+      }
+    }
+  }
+}
+@media (max-width: 765px){
+  header{
+    .top{
+
+    }
+    .navMenu{
+      .menu{
+        .nav{
+          ul{
+            li{
+              padding: 25px 10px 0px;
+            }
+          }
+        }
+        .tool{
+          img{
+            margin: 0;
+            width: 30px;
+          }
+        }
       }
     }
   }
@@ -378,9 +417,10 @@ header{
           }
         }
         .tool{
-          i{
+          img{
             padding: 0 15px;
-            font-size: 36px;
+            width: 86px;
+            height: 86px;
           }
         }
       }
@@ -647,6 +687,7 @@ footer{
 @media (max-width: 320px) {
   main{
     .collectionsUpLine{
+
       .season{
         padding: 93px 20px;
         .slider-box{

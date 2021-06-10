@@ -14,11 +14,14 @@ let paddingItem = ((this.innerWidth*0.95)-270)/2
 /////////////////////////////////
 
 openMenu.onclick = function(){
+    document.getElementsByTagName("body")[0].style = "overflow: hidden";
+    console.log(document.getElementsByTagName("body"));
     Menu[0].style = "right: 0px";
     openMenu.style = "display: none";
     closeMenu.style = "display: block";
 }
 closeMenu.onclick = function(){
+    document.getElementsByTagName("body")[0].style = "overflow-y: scroll";
     Menu[0].style = "right: 100%";
     openMenu.style = "display: block";
     closeMenu.style = "display: none";
@@ -83,14 +86,16 @@ let wight = function(){
 }
 
 let newScroll = function(event){
-    positionNEW-=(newOLD - event.targetTouches[0].clientX)/5
-  //  console.log(positionNEW+" = "+newOLD+" - "+event.targetTouches[0].clientX)
+
+
+    positionNEW-=(newOLD - event.targetTouches[0].clientX )/10
+   console.log( newOLD - event.targetTouches[0].clientX)
     bodyNew[0].style = "left: "+positionNEW+"px";
 
 
 }
 let newStabiliti = function(event){
-    let abc = Math.ceil( positionNEW/270);
+    let abc = Math.ceil( positionNEW/280);
     if(positionNEW>=-810){
         positionNEW = -540+paddingItem;
         bodyNew[0].style = " transition: 0.5s; left: "+positionNEW+"px";

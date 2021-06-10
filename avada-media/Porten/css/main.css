@@ -145,13 +145,13 @@ header .navMenu .menu .nav ul li:hover p {
 header .navMenu .menu .tool {
   margin-right: -15px;
 }
-header .navMenu .menu .tool i {
+header .navMenu .menu .tool img {
   color: white;
   font-size: 16px;
   padding: 0 5px;
   margin: 0 20px;
 }
-header .navMenu .menu .tool i:hover {
+header .navMenu .menu .tool img:hover {
   cursor: pointer;
 }
 header .mobileHead {
@@ -229,12 +229,12 @@ main .collectionsUpLine .season .list ul li .text {
 }
 main .collectionsUpLine .season .list ul li .text h3 {
   font-size: 18px;
-  font-family: Playfair-Italic;
+  font-family: Playfair;
   font-weight: 400;
 }
 main .collectionsUpLine .season .list ul li .text p {
   font-size: 16px;
-  font-family: Playfair-Italic;
+  font-family: Playfair;
   font-weight: 700;
   color: #d0d0d0;
   margin: 0;
@@ -358,6 +358,9 @@ main .newArrivals .arrows .fa-chevron-right {
   position: absolute;
   right: -50px;
 }
+main .newArrivals .arrows:hover {
+  cursor: pointer;
+}
 main .newArrivals .listArrivals {
   margin: 0 -25px -20px;
 }
@@ -381,12 +384,12 @@ main .newArrivals .listArrivals ul li .text {
 }
 main .newArrivals .listArrivals ul li .text h3 {
   font-size: 18px;
-  font-family: Playfair-Italic;
+  font-family: Playfair;
   font-weight: 400;
 }
 main .newArrivals .listArrivals ul li .text p {
   font-size: 16px;
-  font-family: Playfair-Italic;
+  font-family: Playfair;
   font-weight: 700;
   color: #d0d0d0;
   margin: 0;

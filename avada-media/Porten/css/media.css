@@ -115,7 +115,15 @@
   }
 }
 /*Tablet version*/
+@media (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 @media (max-width: 950px) {
+  header .navMenu .menu .tool img {
+    margin: 0 10px;
+  }
   main .collectionsUpLine .season .list {
     margin: 0 -10px;
   }
@@ -175,6 +183,15 @@
   }
   footer .footerBaner .form input::-webkit-input-placeholder {
     color: #0f0f0f;
+  }
+}
+@media (max-width: 765px) {
+  header .navMenu .menu .nav ul li {
+    padding: 25px 10px 0px;
+  }
+  header .navMenu .menu .tool img {
+    margin: 0;
+    width: 30px;
   }
 }
 /*Mobile version*/
@@ -271,9 +288,10 @@
     text-transform: uppercase;
     font-family: PTSans;
   }
-  header .mobileHead .mobileNav .menu .tool i {
+  header .mobileHead .mobileNav .menu .tool img {
     padding: 0 15px;
-    font-size: 36px;
+    width: 86px;
+    height: 86px;
   }
   header .mobileHead .mobileNav .info {
     margin-top: 25px;
