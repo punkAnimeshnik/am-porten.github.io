@@ -15,6 +15,20 @@
   border-collapse: collapse;
   list-style: none;
 }
+.title {
+  justify-content: center;
+  display: flex;
+}
+.title h1 {
+  font-family: Open Sans Light;
+  font-size: 48px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px;
+}
+.yellowSubmarin {
+  color: #D1A954;
+}
 header {
   background-image: url("../img/background/buner.jpg");
   color: white;
@@ -56,9 +70,11 @@ header .leftLine .social ul li {
   text-align: center;
 }
 header .leftLine .social ul li i {
+  transition: 0.3s;
   font-size: 26px;
 }
 header .leftLine .social ul li i:hover {
+  transition: 0.3s;
   color: #d1a954;
   cursor: pointer;
 }
@@ -70,6 +86,7 @@ header .navMenu .menu nav ul {
   justify-content: space-between;
 }
 header .navMenu .menu nav ul li a {
+  transition: 0.3s;
   text-decoration: none;
   color: white;
   text-transform: uppercase;
@@ -79,6 +96,11 @@ header .navMenu .menu nav ul li a {
 }
 header .navMenu .menu nav ul li a p {
   margin: 0;
+}
+header .navMenu .menu nav ul li a:hover {
+  transition: 0.3s;
+  color: #d1a954;
+  cursor: pointer;
 }
 header .navMenu .phone {
   display: flex;
@@ -144,7 +166,26 @@ header .buner .slider {
   flex-direction: column;
   align-items: center;
 }
+header .buner .slider .slider-box {
+  width: 370px;
+  height: 510px;
+  overflow: hidden;
+}
+header .buner .slider .slider-box .slider-buner-body {
+  transition: 0.5s;
+  padding-left: 20px;
+  padding-top: 20px;
+  position: relative;
+}
+header .buner .slider .slider-box .slider-buner-body ul {
+  margin: 0 -15px;
+  width: 1140px;
+  display: flex;
+  justify-content: center;
+}
 header .buner .slider .slider-box .slider-buner-body ul li {
+  width: 350px;
+  margin: 0 15px;
   background-image: url("../img/foto/item-buner.jpg");
 }
 header .buner .slider .slider-box .slider-buner-body ul li .item {
@@ -163,6 +204,7 @@ header .buner .slider .slider-arrows {
 }
 header .buner .slider .slider-arrows .prew,
 header .buner .slider .slider-arrows .next {
+  transition: 0.3s;
   display: flex;
 }
 header .buner .slider .slider-arrows .prew p,
@@ -180,20 +222,6 @@ header .buner .slider .slider-arrows:hover {
 main {
   background: #333333;
   color: white;
-}
-main .title {
-  justify-content: center;
-  display: flex;
-}
-main .title h1 {
-  font-family: Open Sans Light;
-  font-size: 48px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 10px;
-}
-main .yellowSubmarin {
-  color: #D1A954;
 }
 main .aboutTheatre {
   padding: 150px 0 50px;
@@ -248,6 +276,7 @@ main .ourDeliveries .slider-box .slider-our-body ul li .item {
 }
 main .ourDeliveries .slider-box .slider-our-body ul li .item .foto img {
   width: 410px;
+  height: 500px;
 }
 main .ourDeliveries .slider-box .slider-our-body ul li .item .hover {
   position: relative;
@@ -260,6 +289,7 @@ main .ourDeliveries .slider-box .slider-our-body ul li .item .hover .face {
   height: 500px;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(0deg, rgba(51, 51, 51, 0.65), rgba(51, 51, 51, 0.65));
 }
 main .ourDeliveries .slider-box .slider-our-body ul li .item .hover .face .subtitle h2 {
   font-family: Open_Sans;
@@ -298,4 +328,180 @@ main .ourDeliveries .slider-box .slider-our-body ul li .item .hover .back .zoom:
 main .ourDeliveries .slider-box .slider-our-body ul li .item .hover:hover {
   top: -1000px;
   transition: 0.5s;
+}
+main .besTheater {
+  padding: 75px;
+}
+main .besTheater .container {
+  padding: 0;
+  background-image: url("../img/background/goodTeatre.jpg");
+  background-size: cover;
+}
+main .besTheater .container .row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+main .besTheater .container .years {
+  text-align: right;
+  padding: 130px;
+}
+main .besTheater .container .years h2 {
+  font-family: Open_Sans;
+  font-size: 72px;
+  line-height: 98px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+main .besTheater .container .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .besTheater .container .info .title {
+  font-size: 24px;
+  margin-top: -25px;
+}
+main .besTheater .container .info .title ul {
+  margin: 25px -12.5px;
+  display: flex;
+}
+main .besTheater .container .info .title ul li {
+  margin: 0 12.5px;
+}
+main .besTheater .container .info .text {
+  width: 540px;
+}
+main .besTheater .container .info .text h3 {
+  font-family: Open_Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 150%;
+}
+main .ourPartners {
+  padding: 75px;
+}
+main .ourPartners .title {
+  margin-bottom: 100px;
+}
+main .ourPartners .title h1 {
+  margin: 0;
+}
+main .ourPartners .icons ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -40px;
+}
+main .ourPartners .icons ul li {
+  margin: 40px;
+}
+footer {
+  padding: 50px 0 0 0;
+  color: white;
+  background: #333333;
+}
+footer .maecenas .col-xl-8,
+footer .maecenas .col-xl-4 {
+  padding: 0;
+}
+footer .maecenas .title {
+  margin-bottom: 100px;
+}
+footer .maecenas .contacts {
+  margin: -12.5px 0;
+}
+footer .maecenas .contacts h3 {
+  margin: 12.5px 0;
+  font-family: Open_Sans;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+footer .maecenas .form form .input {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 40px;
+}
+footer .maecenas .form form .input .text {
+  margin: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+footer .maecenas .form form .input .text input {
+  width: 42%;
+  height: 35px;
+  margin: 15px;
+  background: #444444;
+  border: 1px solid #616161;
+  box-sizing: border-box;
+  padding: 0 15px;
+  font-family: Open_Sans;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: #989898;
+}
+footer .maecenas .form form .input .textarea {
+  margin-left: 30px;
+}
+footer .maecenas .form form .input .textarea textarea {
+  height: 100%;
+  background: #444444;
+  border: 1px solid #616161;
+  box-sizing: border-box;
+  padding: 15px;
+  font-family: Open_Sans;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: #989898;
+}
+footer .maecenas .form form .down {
+  display: flex;
+  justify-content: space-between;
+}
+footer .maecenas .form form .down p {
+  width: 55%;
+  font-family: Open_Sans;
+  font-size: 12px;
+  color: #989898;
+}
+footer .maecenas .form form .down button {
+  height: 50px;
+  width: 200px;
+  background: #D1A954;
+}
+footer .maecenas .form form .down button h2 {
+  margin: auto;
+  color: white;
+  font-family: Open_Sans;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+footer .downLine {
+  padding-top: 30px;
+}
+footer .downLine hr {
+  width: 100%;
+  background-color: #565656;
+}
+footer .downLine .row {
+  padding: 30px 0;
+}
+footer .downLine p {
+  font-family: Open_Sans;
+  font-size: 12px;
+  color: #989898;
+}
+footer .downLine .developer {
+  text-align: right;
 }
