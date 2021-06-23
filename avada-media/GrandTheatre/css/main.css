@@ -29,12 +29,17 @@
 .yellowSubmarin {
   color: #D1A954;
 }
+.fantom {
+  display: none;
+}
 header {
   background-image: url("../img/background/buner.jpg");
+  background-size: cover;
   color: white;
   padding-top: 50px;
 }
 header .leftLine {
+  z-index: 10;
   position: fixed;
   left: 0;
   top: 0;
@@ -172,7 +177,6 @@ header .buner .slider .slider-box {
   overflow: hidden;
 }
 header .buner .slider .slider-box .slider-buner-body {
-  transition: 0.5s;
   padding-left: 20px;
   padding-top: 20px;
   position: relative;
@@ -222,6 +226,9 @@ header .buner .slider .slider-arrows:hover {
 main {
   background: #333333;
   color: white;
+}
+main .fantom {
+  display: none;
 }
 main .aboutTheatre {
   padding: 150px 0 50px;
@@ -477,6 +484,7 @@ footer .maecenas .form form .down button {
   height: 50px;
   width: 200px;
   background: #D1A954;
+  border: none;
 }
 footer .maecenas .form form .down button h2 {
   margin: auto;

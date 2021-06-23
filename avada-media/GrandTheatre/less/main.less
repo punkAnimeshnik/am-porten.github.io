@@ -32,11 +32,17 @@
 .yellowSubmarin{
   color: #D1A954;
 }
+.fantom{
+  display: none;
+}
+
 header{
   background-image: url("../img/background/buner.jpg");
+  background-size: cover;
   color: white;
   padding-top: 50px;
   .leftLine{
+    z-index: 10;
     position: fixed;
     left: 0;
     top: 0;
@@ -192,7 +198,6 @@ header{
         height: 510px;
         overflow: hidden;
         .slider-buner-body{
-          transition: 0.5s;
           padding-left: 20px;
           padding-top: 20px;
           position: relative;
@@ -251,6 +256,9 @@ header{
 
 }
 main{
+  .fantom{
+    display: none;
+  }
   background: rgba(51, 51, 51, 1);
 
   color: white;
@@ -542,6 +550,7 @@ footer{
             height: 50px;
             width: 200px;
             background: #D1A954;
+            border: none;
 
             h2{
               margin:auto;

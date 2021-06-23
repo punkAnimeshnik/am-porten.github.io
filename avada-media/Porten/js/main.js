@@ -86,16 +86,12 @@ let wight = function(){
 }
 
 let newScroll = function(event){
-
-
-    positionNEW-=(newOLD - event.targetTouches[0].clientX )/10
-   console.log( newOLD - event.targetTouches[0].clientX)
+    positionNEW-=Math.ceil(newOLD - event.targetTouches[0].clientX )
     bodyNew[0].style = "left: "+positionNEW+"px";
-
-
+    newOLD=event.targetTouches[0].clientX;
 }
 let newStabiliti = function(event){
-    let abc = Math.ceil( positionNEW/280);
+    let abc = Math.ceil( positionNEW/270);
     if(positionNEW>=-810){
         positionNEW = -540+paddingItem;
         bodyNew[0].style = " transition: 0.5s; left: "+positionNEW+"px";
@@ -108,7 +104,13 @@ let newStabiliti = function(event){
     else if (positionNEW <= -810 &&positionNEW > maxNEW) {
 
         positionNEW = (abc*-270)-paddingItem;
-        positionNEW *= -1;
+        if (positionNEW>0){
+            positionNEW+=270;
+        }
+        else {
+            positionNEW-=270;
+        }
+        positionNEW *= -1
         bodyNew[0].style = " transition: 0.5s; left: "+positionNEW+"px";
     }
     else if (positionNEW <= maxNEW){
@@ -124,9 +126,9 @@ let newStabiliti = function(event){
 }
 
 let seasonScroll = function(event){
-    positionSEASON+=(seasonOLD - event.targetTouches[0].clientX)/5
+    positionSEASON+=Math.ceil(seasonOLD - event.targetTouches[0].clientX)
     bodySEASON[0].style = "right: "+positionSEASON+"px";
-
+    seasonOLD = event.targetTouches[0].clientX
 
 }
 let seasonStabiliti = function(event){
@@ -144,6 +146,12 @@ let seasonStabiliti = function(event){
     else if (positionSEASON>=0&&positionSEASON<maxSEASON) {
 
        positionSEASON= (abc*270)-paddingItem;
+        if (positionNEW>0){
+            positionNEW+=270;
+        }
+        else {
+            positionNEW-=270;
+        }
         bodySEASON[0].style = " transition: 0.5s; right: "+positionSEASON+"px";
     }
     else if (positionSEASON=>maxSEASON){
@@ -160,10 +168,9 @@ let seasonStabiliti = function(event){
 }
 
 let brandsScroll = function(event){
-    positionBrands+=(brandsOLD - event.targetTouches[0].clientX)/10
-
+    positionBrands+=Math.ceil(brandsOLD - event.targetTouches[0].clientX)
     bodyBrands[0].style = "right: "+positionBrands+"px";
-
+    brandsOLD = event.targetTouches[0].clientX
 
 }
 let brandsStabiliti = function(){

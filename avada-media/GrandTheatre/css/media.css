@@ -1,4 +1,172 @@
 /*Pretentious version*/
+@media (max-width: 2560px) {
+  main .ourDeliveries .slider-box .slider-our-body ul {
+    justify-content: center;
+  }
+}
 /*Desktop version*/
+@media (max-width: 1920px) {
+  main .ourDeliveries .slider-box .slider-our-body ul {
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 1800px) {
+  .fantom {
+    display: block;
+  }
+  main .ourDeliveries .slider-box {
+    width: 90vw;
+    overflow: hidden;
+  }
+  main .ourDeliveries .slider-box .slider-our-body {
+    position: relative;
+  }
+  main .ourDeliveries .slider-box .slider-our-body ul {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 1500px) {
+  header .leftLine {
+    padding: 50px 0;
+    justify-content: flex-start;
+  }
+  header .leftLine hr {
+    margin: 80px 0;
+  }
+}
+@media (max-width: 1440px) {
+  body {
+    overflow-x: hidden;
+  }
+  header .container {
+    margin-left: 150px;
+  }
+  header .leftLine {
+    padding: 50px 0;
+    justify-content: flex-start;
+  }
+  header .leftLine hr {
+    margin: 70px 0;
+  }
+  header .navMenu .menu nav ul {
+    justify-content: space-around;
+  }
+  main .container {
+    margin-left: 150px;
+  }
+  main .ourDeliveries .slider-box {
+    width: 87vw;
+    overflow: hidden;
+  }
+  main .ourDeliveries .slider-box .slider-our-body {
+    position: relative;
+    left: -1640px;
+  }
+  main .ourDeliveries .slider-box .slider-our-body ul {
+    justify-content: flex-start;
+  }
+  main .besTheater .container {
+    position: relative;
+    left: -50px;
+  }
+  main .ourPartners .icons ul {
+    position: relative;
+    left: -50px;
+    margin: -20px;
+  }
+  main .ourPartners .icons ul li {
+    margin: 20px;
+  }
+  footer .container {
+    margin-left: 150px;
+  }
+}
 /*Tablet version*/
+@media (max-width: 992px) {
+  header .container {
+    margin-left: 200px;
+  }
+  header .navMenu .phone {
+    margin-top: 34px;
+    justify-content: center;
+  }
+  header .navMenu .phone p {
+    text-align: center;
+  }
+  header .buner .afisha .text {
+    width: 540px;
+    margin: 50px 0;
+  }
+  header .buner .slider {
+    display: none;
+  }
+  main .container {
+    margin-left: 200px;
+  }
+  main .aboutTheatre .foto {
+    display: none;
+  }
+  main .besTheater {
+    padding: 0;
+  }
+  main .besTheater .container {
+    z-index: 0;
+    max-width: 100vw;
+    left: 0;
+    margin: 0;
+  }
+  main .besTheater .container .row {
+    margin: 0;
+    padding-left: 100px;
+  }
+  main .besTheater .container .row .info {
+    margin-left: 60px;
+  }
+  main .ourPartners {
+    padding-top: 150px;
+  }
+  main .ourPartners .container,
+  main .ourPartners .title {
+    margin-left: 125px;
+  }
+  main .ourPartners .fantom {
+    display: block;
+  }
+  main .ourPartners .slider-box {
+    width: 660px;
+    overflow: hidden;
+  }
+  main .ourPartners .slider-box .slider-partner-body {
+    position: relative;
+    width: 1980px;
+  }
+  main .ourPartners .slider-box .slider-partner-body ul {
+    left: 0;
+  }
+  footer p {
+    padding: 0;
+  }
+  footer .container,
+  footer .title {
+    margin-left: 200px;
+  }
+  footer .maecenas .contacts {
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .maecenas .contacts .other {
+    text-align: right;
+  }
+  footer .downLine .container {
+    padding: 0;
+  }
+  footer .downLine .row {
+    padding: 0;
+    margin: 0;
+  }
+  footer .downLine .row .col-xl-6 {
+    padding: 0;
+  }
+}
 /*Mobile version*/
