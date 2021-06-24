@@ -223,6 +223,90 @@ header .buner .slider .slider-arrows .next p {
 header .buner .slider .slider-arrows:hover {
   cursor: pointer;
 }
+header .mobileHead {
+  display: none;
+}
+header .mobileHead .mobileTop {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+header .mobileHead .mobileTop .phone p {
+  font-size: 16px;
+  font-family: Open_Sans;
+  letter-spacing: 0.05em;
+  line-height: 15px;
+  margin: 0;
+  height: 20px;
+  border-bottom: 2px solid #d1a954;
+}
+header .mobileHead .mobileNav {
+  transition: 0.5s;
+  z-index: 15;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  padding: 40px;
+  background: #333333;
+}
+header .mobileHead .mobileNav .iconClose {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  font-size: 16px;
+}
+header .mobileHead .mobileNav .menu {
+  margin: 85px 0;
+  padding: 0;
+}
+header .mobileHead .mobileNav .menu nav ul {
+  display: flex;
+  flex-direction: column;
+  margin: -17.5px 0;
+}
+header .mobileHead .mobileNav .menu nav ul li {
+  margin: 17.5px 0;
+}
+header .mobileHead .mobileNav .menu nav ul li a {
+  transition: 0.3s;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: Open_Sans;
+  letter-spacing: 0.1em;
+}
+header .mobileHead .mobileNav .menu nav ul li a p {
+  margin: 0;
+}
+header .mobileHead .mobileNav .menu nav ul li a:hover {
+  transition: 0.3s;
+  color: #d1a954;
+  cursor: pointer;
+}
+header .mobileHead .mobileNav .social {
+  margin: 0 40px;
+}
+header .mobileHead .mobileNav .social ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -25px;
+}
+header .mobileHead .mobileNav .social ul li {
+  margin: 25px;
+  text-align: center;
+}
+header .mobileHead .mobileNav .social ul li i {
+  transition: 0.3s;
+  font-size: 26px;
+}
+header .mobileHead .mobileNav .social ul li i:hover {
+  transition: 0.3s;
+  color: #d1a954;
+  cursor: pointer;
+}
 main {
   background: #333333;
   color: white;
@@ -388,6 +472,9 @@ main .besTheater .container .info .text h3 {
 }
 main .ourPartners {
   padding: 75px;
+}
+main .ourPartners .fantom {
+  display: none;
 }
 main .ourPartners .title {
   margin-bottom: 100px;

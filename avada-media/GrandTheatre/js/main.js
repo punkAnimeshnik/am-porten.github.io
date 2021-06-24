@@ -1,5 +1,8 @@
 let left = document.getElementById("prew")
 let right = document.getElementById("next")
+let openMenu = document.getElementById("open")
+let closeMenu = document.getElementById("close")
+let Menu = document.getElementsByClassName("mobileNav")
 let bodyBuner = document.getElementsByClassName("slider-buner-body")
 let bodyOur = document.getElementsByClassName("slider-our-body")
 let bodyPartner = document.getElementsByClassName("slider-partner-body")
@@ -8,6 +11,13 @@ let positionBuner,positionOur,positionPartner,  OLD;
 
 
 /////////////////////////////////
+
+openMenu.onclick = function(){
+    Menu[0].style = "left: 0px";
+}
+closeMenu.onclick = function(){
+    Menu[0].style = "left: -300px";
+}
 
 left.onclick = function () {
     positionBuner+=380

@@ -29,10 +29,11 @@ main{
   }
 }
 @media (max-width: 1800px) {
-.fantom{
-  display: block;
-}
+
   main{
+    .fantom{
+      display: block;
+    }
     .ourDeliveries{
       .slider-box{
         //width: 1640px;
@@ -69,7 +70,7 @@ header{
   }
   header{
     .container{
-      margin-left: 150px;
+      margin-left: 175px;
     }
     .leftLine{
       padding: 50px 0;
@@ -96,7 +97,7 @@ header{
   }
   main{
     .container{
-      margin-left: 150px;
+      margin-left: 175px;
     }
     .ourDeliveries{
       .slider-box{
@@ -134,7 +135,7 @@ header{
   }
   footer{
     .container{
-      margin-left: 150px;
+      margin-left: 175px;
     }
   }
 }
@@ -254,8 +255,106 @@ header{
     }
   }
 }
-@media (max-width: 765px){
+@media (max-width: 768px){
+  header{
+  padding: 0;
+  .container{
+    margin-left: 100px;
+  }
+  .navMenu, .leftLine{
+    display: none;
+  }
+  .mobileHead{
+    display: block;
+    .mobileTop{
+      width: 100%;
+      z-index: 15;
+      //position: fixed;
+      top: 0;
+      .icons{
 
+      }
+
+      .phone{
+
+      }
+    }
+  }
+}
+  main{
+    .container{
+      margin: 40px;
+    }
+    .aboutTheatre{
+     padding: 100px 0 50px;
+    }
+    .ourDeliveries{
+      padding: 50px 40px;
+      .slider-box{
+        margin: 0;
+        width: 100%;
+      }
+    }
+    .besTheater{
+      margin: 40px 0;
+      padding: 0;
+      .container{
+        z-index: 0;
+        max-width: 100vw;
+        left: 0;
+        margin: 0;
+        .row{
+          margin: 0;
+          padding: 0px;
+
+          .info{
+            margin-left: 60px;
+          }
+        }
+      }
+    }
+    .ourPartners{
+      padding: 50px 0;
+      .container, .title{
+        margin: 0;
+      }
+      .container{
+        max-width: 100%;
+        padding: 0 40px;
+      }
+
+      .slider-box{
+        width: 100%;
+      }
+    }
+  }
+  footer{
+    top: -1px;
+    position: relative;
+    .container, .title{
+      margin: 0px;
+    }
+    .container{
+      max-width: 100%;
+      padding: 0 40px;
+    }
+    .maecenas{
+      .contacts{
+        margin-top: 75px;
+        display: flex;
+        justify-content: space-between;
+        .other{
+          text-align: right;
+        }
+      }
+    }
+    .downLine{
+      .container{
+        padding: 0 30px;
+      }
+
+    }
+  }
 }
 
 /*Mobile version*/
