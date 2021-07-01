@@ -3,6 +3,7 @@ let right = document.getElementById("next")
 let openMenu = document.getElementById("open")
 let closeMenu = document.getElementById("close")
 let Menu = document.getElementsByClassName("mobileNav")
+let body = document.getElementsByTagName("body")
 let bodyBuner = document.getElementsByClassName("slider-buner-body")
 let bodyOur = document.getElementsByClassName("slider-our-body")
 let bodyPartner = document.getElementsByClassName("slider-partner-body")
@@ -61,10 +62,10 @@ let ourStabiliti = function(){
         positionOur+=1640
     }
     bodyOur[0].style = "left: "+positionOur+"px";
+    body[0].style = "overflow-y: scroll;";
 }
 let partnerScroll = function(event){
 
-    console.log("hi")
     let a = 0;
     a= Math.ceil(OLD - event.targetTouches[0].clientX)
     positionPartner-=a;
@@ -82,6 +83,7 @@ let partnerStabiliti = function(){
         positionPartner+=480
     }
     bodyPartner[0].style = "left: "+positionPartner+"px";
+    body[0].style = "overflow-y: scroll;";
 }
 
 /////////////////////////////////
@@ -90,12 +92,14 @@ bodyOur[0].addEventListener("touchmove",ourScroll)
 bodyOur[0].addEventListener("touchend",ourStabiliti)
 bodyOur[0].addEventListener("touchstart",function (event) {
     OLD = event.targetTouches[0].clientX;
+    body[0].style = "overflow-y: hidden;";
 })
 
 bodyPartner[0].addEventListener("touchmove",partnerScroll)
 bodyPartner[0].addEventListener("touchend",partnerStabiliti)
 bodyPartner[0].addEventListener("touchstart",function (event) {
     OLD = event.targetTouches[0].clientX;
+    body[0].style = "overflow-y: hidden;";
 })
 
 
@@ -113,5 +117,4 @@ setTimeout(function (){
     bodyOur[0].style = "left: "+positionOur+"px"
     positionPartner=-480
     bodyPartner[0].style = "left: "+positionPartner+"px"
-    console.log(bodyOur)
 },1)
