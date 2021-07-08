@@ -120,7 +120,7 @@
     width: 1050px;
   }
   footer .maecenas .form {
-    padding-right: 50px;
+    padding-right: 45px;
   }
 }
 @media (max-width: 1199px) {
@@ -129,6 +129,9 @@
   }
   footer .maecenas .form {
     padding-right: 0;
+  }
+  footer .maecenas .form form .input .text input {
+    width: 40%;
   }
 }
 @media (max-width: 1024px) {
@@ -222,6 +225,9 @@
   }
   footer .maecenas .container .contacts .other {
     text-align: right;
+  }
+  footer .maecenas .form form .input .text input {
+    width: 42%;
   }
   footer .downLine .container {
     margin-left: 150px;
@@ -541,6 +547,9 @@
   }
 }
 @media (max-width: 475px) {
+  .title h1 {
+    font-size: 40px;
+  }
   header .container,
   header .text {
     max-width: 400px;
@@ -614,9 +623,6 @@
   header .container {
     margin-left: 10px;
   }
-  main .title h1 {
-    font-size: 44px;
-  }
   main .container {
     max-width: 325px;
   }
@@ -625,9 +631,6 @@
   }
   main .aboutTheatre .container .row {
     max-width: 100vw;
-  }
-  footer .maecenas .title h1 {
-    font-size: 42px;
   }
   footer .maecenas .form form .input .text {
     margin: -15px;

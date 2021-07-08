@@ -44,14 +44,18 @@ let ourScroll = function(event){
         if ( event.which==1){
         a= Math.ceil(OLD - event.clientX)}
     }
-    positionOur-=a;
-    bodyOur[0].style = "left: "+positionOur+"px";
-    if (event.type == "touchmove"){
-        OLD=event.targetTouches[0].clientX;}
-    else {
-            OLD=event.clientX;
+    if (a!=0) {
+        positionOur -= a;
+        bodyOur[0].style = "left: " + positionOur + "px";
+        if (event.type == "touchmove") {
+            OLD = event.targetTouches[0].clientX;
+        } else {
+            OLD = event.clientX;
+        }
     }
-
+    else {
+        body[0].style = "overflow-y: scroll;";
+    }
 }
 let ourStabiliti = function(){
 
@@ -62,16 +66,25 @@ let ourStabiliti = function(){
         positionOur+=1640
     }
     bodyOur[0].style = "left: "+positionOur+"px";
+    if(window.innerWidth<=425){
+        let abc = Math.ceil( positionOur/350);
+        positionOur=(abc*410)+Math.ceil( (window.innerWidth-410)/2);
+        bodyOur[0].style = "transition: 0.5s; left: "+positionOur+"px";
+    }
     body[0].style = "overflow-y: scroll;";
 }
 let partnerScroll = function(event){
 
     let a = 0;
     a= Math.ceil(OLD - event.targetTouches[0].clientX)
-    positionPartner-=a;
-    bodyPartner[0].style = "left: "+positionPartner+"px";
-    OLD=event.targetTouches[0].clientX;
-
+    if(a!=0) {
+        positionPartner -= a;
+        bodyPartner[0].style = "left: " + positionPartner + "px";
+        OLD = event.targetTouches[0].clientX;
+    }
+    else{
+        body[0].style = "overflow-y: scroll;";
+    }
 
 }
 let partnerStabiliti = function(){
@@ -114,6 +127,10 @@ setTimeout(function (){
     positionBuner=-380
     bodyBuner[0].style = "left: "+positionBuner+"px"
     positionOur=-1640
+    if(window.innerWidth<=425){
+        let abc = Math.ceil( (window.innerWidth-410)/2);
+        positionOur+=abc;
+    }
     bodyOur[0].style = "left: "+positionOur+"px"
     positionPartner=-480
     bodyPartner[0].style = "left: "+positionPartner+"px"

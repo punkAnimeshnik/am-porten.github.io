@@ -1,10 +1,14 @@
 @font-face {
-  font-family: Open_Sans;
-  src: url(../fonts/Open_Sans_Condensed/OpenSansCondensed-Bold.ttf);
+  font-family: OpenSans;
+  src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
 }
 @font-face {
-  font-family: Open Sans Light;
-  src: url(../fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf);
+  font-family: OpenSans-Bold;
+  src: url(../fonts/Open_Sans/OpenSans-Bold.ttf);
+}
+@font-face {
+  font-family: OpenSansCondensed;
+  src: url(../fonts/Open_Sans/OpenSansCondensed-Bold.ttf);
 }
 
 
@@ -22,11 +26,16 @@
   justify-content: center;
   display: flex;
   h1{
-    font-family: Open Sans Light;
+    font-family: OpenSansCondensed;
     font-size: 48px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 10px;
+  }
+}
+.text{
+  p{
+    font-family: OpenSans;
   }
 }
 .yellowSubmarin{
@@ -59,7 +68,7 @@ header{
         writing-mode: vertical-rl;
         transform: rotate(180deg);
         font-size: 18px;
-        font-family: Open_Sans;
+        font-family: OpenSansCondensed;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: rgba(196, 196, 196, 1);
@@ -107,7 +116,7 @@ header{
             color: white;
             text-transform: uppercase;
             font-size: 18px;
-            font-family: Open_Sans;
+            font-family: OpenSansCondensed;
             letter-spacing: 0.1em;
             p{
               margin: 0;
@@ -128,7 +137,7 @@ header{
       justify-content: flex-end;
       p{
         font-size: 16px;
-        font-family: Open_Sans;
+        font-family: OpenSansCondensed;
         letter-spacing: 0.05em;
         line-height: 15px;
         margin: 0;
@@ -147,9 +156,6 @@ header{
       justify-content: center;
       .title{
         h1{
-          font-family: Open_Sans;
-          font-style: normal;
-          font-weight: bold;
           font-size: 64px;
           line-height: 87px;
           letter-spacing: 0.1em;
@@ -159,6 +165,7 @@ header{
       .text{
         margin: 50px auto;
         p{
+          font-family: OpenSans;
           font-style: normal;
           font-weight: normal;
           font-size: 14px;
@@ -177,7 +184,7 @@ header{
 
 
           h2{
-            font-family: Open_Sans;
+            font-family: OpenSansCondensed;
             margin-top: 7px;
             font-size: 18px;
             line-height: 25px;
@@ -233,7 +240,7 @@ header{
 
           p{
             margin: 25px;
-            font-family: Open_Sans;
+            font-family: OpenSansCondensed;
             font-size: 18px;
             letter-spacing: 0.1em;
             text-transform: uppercase;
@@ -262,7 +269,7 @@ header{
     .phone{
       p{
         font-size: 16px;
-        font-family: Open_Sans;
+        font-family: OpenSansCondensed;
         letter-spacing: 0.05em;
         line-height: 15px;
         margin: 0;
@@ -303,7 +310,7 @@ header{
               color: white;
               text-transform: uppercase;
               font-size: 18px;
-              font-family: Open_Sans;
+              font-family: OpenSansCondensed;
               letter-spacing: 0.1em;
               p{
                 margin: 0;
@@ -347,35 +354,29 @@ header{
 
 }
 main{
+  background: rgba(51, 51, 51, 1);
+  color: white;
   .fantom{
     display: none;
   }
-  background: rgba(51, 51, 51, 1);
-
-  color: white;
   .aboutTheatre{
     padding: 150px 0 50px;
-
-
     .container{
       padding: 100px 0 0;
       .subtitle{
         padding-bottom: 40px;
         h3{
-          font-family: Open_Sans;
+          font-family: OpenSansCondensed;
           font-size: 21px;
           line-height: 29px;
           letter-spacing: 0.1em;
           text-transform: uppercase;
           margin: 0;
         }
-
       }
       .text{
         p{
           font-size: 14px;
-
-
         }
       }
       .icons{
@@ -433,7 +434,7 @@ main{
                   background: linear-gradient(0deg, rgba(51, 51, 51, 0.65), rgba(51, 51, 51, 0.65));
                   .subtitle{
                     h2{
-                      font-family: Open_Sans;
+                      font-family: OpenSansCondensed;
                       font-size: 24px;
                       line-height: 33px;
                       letter-spacing: 0.05em;
@@ -442,7 +443,7 @@ main{
                     }
                   }
                   .text{
-                    font-family: Open_Sans;
+                    font-family: OpenSansCondensed;
                     font-size: 18px;
                     line-height: 25px;
                     letter-spacing: 0.1em;
@@ -499,7 +500,7 @@ main{
         text-align: right;
          padding: 130px;
         h2{
-          font-family: Open_Sans;
+          font-family: OpenSansCondensed;
           font-size: 72px;
           line-height: 98px;
           letter-spacing: 0.1em;
@@ -525,7 +526,7 @@ main{
         .text{
           width: 540px;
           h3{
-            font-family: Open_Sans;
+            font-family: OpenSans-Bold;
             font-style: normal;
             font-weight: bold;
             font-size: 36px;
@@ -576,7 +577,7 @@ footer{
       margin: -12.5px 0;
       h3{
         margin: 12.5px 0;
-        font-family: Open_Sans;
+        font-family: OpenSansCondensed;
         font-size: 16px;
         line-height: 22px;
         letter-spacing: 0.05em;
@@ -607,7 +608,7 @@ footer{
               border: 1px solid #616161;
               box-sizing: border-box;
               padding: 0 15px;
-              font-family: Open_Sans;
+              font-family: OpenSans;
               font-size: 12px;
               display: flex;
               align-items: center;
@@ -623,7 +624,7 @@ footer{
               border: 1px solid #616161;
               box-sizing: border-box;
               padding: 15px;
-              font-family: Open_Sans;
+              font-family: OpenSans;
               font-size: 12px;
               display: flex;
               align-items: center;
@@ -636,7 +637,7 @@ footer{
           justify-content: space-between;
           p{
             width: 55%;
-            font-family: Open_Sans;
+            font-family: OpenSans;
             font-size: 12px;
             color: #989898;
           }
@@ -649,7 +650,7 @@ footer{
             h2{
               margin:auto;
               color: white;
-              font-family: Open_Sans;
+              font-family: OpenSansCondensed;
               font-size: 18px;
               line-height: 25px;
 
@@ -673,7 +674,7 @@ footer{
       padding: 30px 0;
     }
     p{
-      font-family: Open_Sans;
+      font-family: OpenSans;
       font-size: 12px;
       color: #989898;
     }
