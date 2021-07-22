@@ -28,6 +28,8 @@ class InterestingCreator extends Creator {
     }
 }
 
+/*Не интиересный продукт*/
+
 class NotInterestingCreator extends Creator {
     public factoryMethod(): Product {
         return new NotInterestingProduct();
