@@ -1,9 +1,3 @@
-/**
- * Легковес хранит общую часть состояния (также называемую внутренним
- * состоянием), которая принадлежит нескольким реальным бизнес-объектам.
- * Легковес принимает оставшуюся часть состояния (внешнее состояние, уникальное
- * для каждого объекта) через его параметры метода.
- */
 var Flyweight = /** @class */ (function () {
     function Flyweight(sharedState) {
         this.sharedState = sharedState;
@@ -15,12 +9,6 @@ var Flyweight = /** @class */ (function () {
     };
     return Flyweight;
 }());
-/**
- * Фабрика Легковесов создает объекты-Легковесы и управляет ими. Она
- * обеспечивает правильное разделение легковесов. Когда клиент запрашивает
- * легковес, фабрика либо возвращает существующий экземпляр, либо создает новый,
- * если он ещё не существует.
- */
 var FlyweightFactory = /** @class */ (function () {
     function FlyweightFactory(initialFlyweights) {
         this.flyweights = {};
@@ -29,15 +17,9 @@ var FlyweightFactory = /** @class */ (function () {
             this.flyweights[this.getKey(state)] = new Flyweight(state);
         }
     }
-    /**
-     * Возвращает хеш строки Легковеса для данного состояния.
-     */
     FlyweightFactory.prototype.getKey = function (state) {
         return state.join('_');
     };
-    /**
-     * Возвращает существующий Легковес с заданным состоянием или создает новый.
-     */
     FlyweightFactory.prototype.getFlyweight = function (sharedState) {
         var key = this.getKey(sharedState);
         if (!(key in this.flyweights)) {
@@ -58,10 +40,6 @@ var FlyweightFactory = /** @class */ (function () {
     };
     return FlyweightFactory;
 }());
-/**
- * Клиентский код обычно создает кучу предварительно заполненных легковесов на
- * этапе инициализации приложения.
- */
 var factory = new FlyweightFactory([
     ['Chevrolet', 'Camaro2018', 'розовый'],
     ['Mercedes', 'C300', 'черный'],
@@ -70,12 +48,9 @@ var factory = new FlyweightFactory([
     ['BMW', 'X6', 'белый'],
 ]);
 factory.listFlyweights();
-// ...
 function addCarToPoliceDatabase(ff, plates, owner, brand, model, color) {
     console.log('\nКлиент: Добавление машины в базу данных.');
     var flyweight = ff.getFlyweight([brand, model, color]);
-    // Клиентский код либо сохраняет, либо вычисляет внешнее состояние и
-    // передает его методам легковеса.
     flyweight.operation([plates, owner]);
 }
 addCarToPoliceDatabase(factory, 'АН6315ВН', 'Иван Васильевич', 'BMW', 'M5', 'красный');

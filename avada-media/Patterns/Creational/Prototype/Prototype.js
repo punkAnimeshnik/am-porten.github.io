@@ -15,7 +15,7 @@ var Prototype = /** @class */ (function () {
     Prototype.prototype.clone = function () {
         var clone = Object.create(this);
         clone.component = Object.create(this.bodyType);
-        clone.skills = __assign(__assign({}, this.skills), { prototype: __assign({}, this) });
+        clone.skills = __assign(__assign({}, this.skills), { run: __assign({}, this) });
         return clone;
     };
     return Prototype;
@@ -61,10 +61,10 @@ function clientCode() {
         console.log('У близнецов похожые умения!');
     }
     if (Alex.skills.run === Piter.skills.run) {
-        console.log('Питер бегает лучше');
+        console.log('Но Питер бегает лучше!');
     }
     else {
-        console.log('Алекс бегает лучше');
+        console.log('Но Алекс бегает лучше!');
     }
 }
 clientCode();

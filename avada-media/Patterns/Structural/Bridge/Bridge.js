@@ -2,22 +2,15 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-/**
- * Абстракция устанавливает интерфейс для «управляющей» части двух иерархий
- * классов. Она содержит ссылку на объект из иерархии Реализации и делегирует
- * ему всю настоящую работу.
- */
 var Abstraction = /** @class */ (function () {
     function Abstraction(implementation) {
         this.implementation = implementation;
@@ -28,9 +21,6 @@ var Abstraction = /** @class */ (function () {
     };
     return Abstraction;
 }());
-/**
- * Можно расширить Абстракцию без изменения классов Реализации.
- */
 var AbstractionMacOs = /** @class */ (function (_super) {
     __extends(AbstractionMacOs, _super);
     function AbstractionMacOs() {
@@ -53,52 +43,37 @@ var AbstractionWindows = /** @class */ (function (_super) {
     };
     return AbstractionWindows;
 }(Abstraction));
-/**
- * Каждая Конкретная Реализация соответствует определённой платформе и реализует
- * интерфейс Реализации с использованием API этой платформы.
- */
-var MacOsImplementation = /** @class */ (function () {
-    function MacOsImplementation() {
+var VideoFotoEditorImplementation = /** @class */ (function () {
+    function VideoFotoEditorImplementation() {
     }
-    MacOsImplementation.prototype.operationImplementation = function () {
+    VideoFotoEditorImplementation.prototype.operationImplementation = function () {
         return 'запустилась среда обработки фото и видео';
     };
-    return MacOsImplementation;
+    return VideoFotoEditorImplementation;
 }());
-var WindowsImplementation = /** @class */ (function () {
-    function WindowsImplementation() {
+var IDEImplementation = /** @class */ (function () {
+    function IDEImplementation() {
     }
-    WindowsImplementation.prototype.operationImplementation = function () {
+    IDEImplementation.prototype.operationImplementation = function () {
         return 'запустась среда разработки ПО';
     };
-    return WindowsImplementation;
+    return IDEImplementation;
 }());
-/**
- * За исключением этапа инициализации, когда объект Абстракции связывается с
- * определённым объектом Реализации, клиентский код должен зависеть только от
- * класса Абстракции. Таким образом, клиентский код может поддерживать любую
- * комбинацию абстракции и реализации.
- */
 function clientCode(abstraction) {
-    // ..
     console.log(abstraction.operation());
-    // ..
 }
-/**
- * Клиентский код должен работать с любой предварительно сконфигурированной
- * комбинацией абстракции и реализации.
- */
-var implementation = new MacOsImplementation();
+var implementation = new VideoFotoEditorImplementation();
 var abstraction = new Abstraction(implementation);
 clientCode(abstraction);
-implementation = new WindowsImplementation();
+console.log('');
+implementation = new IDEImplementation();
 abstraction = new Abstraction(implementation);
 clientCode(abstraction);
 console.log('');
-implementation = new MacOsImplementation();
+implementation = new VideoFotoEditorImplementation();
 abstraction = new AbstractionMacOs(implementation);
 clientCode(abstraction);
 console.log('');
-implementation = new WindowsImplementation();
+implementation = new IDEImplementation();
 abstraction = new AbstractionWindows(implementation);
 clientCode(abstraction);

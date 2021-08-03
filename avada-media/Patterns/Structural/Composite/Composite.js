@@ -11,6 +11,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+/**todo Проработай UML lbfuhfve**/
 var Component = /** @class */ (function () {
     function Component() {
     }

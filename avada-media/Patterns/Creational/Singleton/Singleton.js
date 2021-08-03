@@ -16,10 +16,10 @@ function clientCode() {
     var s1 = Singleton.getInstance();
     var s2 = Singleton.getInstance();
     if (s1 === s2) {
-        console.log("1.", s1.someBusinessLogic(), "\n2.", s2.someBusinessLogic());
+        console.log("Переменные содержат одинаковые экземпляры\n1.", s1.someBusinessLogic(), "\n2.", s2.someBusinessLogic());
     }
     else {
-        console.log('Singleton failed, variables contain different instances.');
+        console.log('Переменные содержат разные экземпляры.');
     }
 }
 clientCode();
