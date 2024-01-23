@@ -1,0 +1,112 @@
+{
+  "ENG": {
+    "header": {
+      "NavList": {
+        "Home": "Home",
+        "About": "About me",
+        "Skills": "Skills",
+        "Portfolio": "Portfolio",
+        "Contacts": "Contacts"
+      },
+      "Buner": {
+        "Name": "Ilya Kolomiets",
+        "info":{
+         "work": "Front-end developer",
+          "age": "24 years old",
+          "city": "Odessa"
+        }
+      }
+    },
+    "main": {
+      "About": {
+        "title": "About me",
+        "discript_11": "Hi, I'm Ilya – Front-end developer from Odessa. ",
+        "discript_12": "I am interested in the layout of the sites and everything connected with it.",
+        "discript_21": "I study at the Odessa Polytechnic Institute  ",
+        "discript_22": "majoring in \"Computer Science\".",
+        "discript_31": "Ready to implement great projects ",
+        "discript_32": "in great company with great people."
+      },
+      "Skills": {
+        "title": "Skills",
+        "descript": "I have skills such as"
+      },
+      "Portfolio": {
+        "title": "Portfolio",
+        "items": {
+          "item1": {
+            "URL": "https://punkanimeshnik.github.io/avada-media/Porten/",
+            "img": "../assets/img/Porten.png",
+            "discript": "Porten watch store - Homepage"
+          },
+          "item2":{
+            "URL": "https://punkanimeshnik.github.io/avada-media/GrandTheatre/",
+            "img": "../assets/img/GrandTheatre.png",
+            "discript": "Grand Theatre ticket booking - Homepage"
+          }
+        }
+
+
+      }
+    },
+    "footer": {
+      "title": "Contacts",
+      "discript1": "Want to know more or just chat?",
+      "discript2": "You are welcome!"
+    }
+  },
+  "RUS": {
+    "header": {
+      "NavList": {
+        "Home": "Главная",
+        "About": "Обо мне",
+        "Skills": "Навыки",
+        "Portfolio": "Портфолио",
+        "Contacts": "Контакты"
+      },
+      "Buner": {
+        "Name": "Илья Коломиец",
+        "info":{
+          "work": "Front-end разработчик",
+          "age": "24 года",
+          "city": "Одесса"
+        }
+      }
+    },
+    "main": {
+      "About": {
+        "title": "Обо мне",
+        "discript_11": "Привет, я Илья — Front-end разработчик из Одессы. ",
+        "discript_12": "Меня интересует верстка сайтов и все что с этим связано.",
+        "discript_21": "Я учусь в Одесском политехническом институте ",
+        "discript_22": "по специальности «Компьютерные науки».",
+        "discript_31": "Готов реализовать крутые проекты ",
+        "discript_32": "в отличной компании с замечательными людьми."
+      },
+      "Skills": {
+        "title": "Навыки",
+        "descript": "У меня есть такие навыки, как"
+      },
+      "Portfolio": {
+        "title": "Портфолио",
+        "items": {
+  "item1": {
+  "URL": "https://punkanimeshnik.github.io/avada-media/Porten/",
+  "img": "http://localhost:8080/img/Porten.558a3b7b.png",
+  "discript": "Porten магазин часов - Домашняя страница"
+},
+  "item2": {
+"URL": "https://punkanimeshnik.github.io/avada-media/GrandTheatre/",
+"img": "http://localhost:8080/img/GrandTheatre.35f40065.png",
+"discript": "Grand Theatre бронирование билетов - Домашняя страница"
+}
+}
+      }
+    },
+    "footer": {
+      "title": "Контакты",
+      "discript1": "Хотите узнать больше или просто пообщаться?",
+      "discript2": "Добро пожаловать!"
+    }
+  }
+}
